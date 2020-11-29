@@ -40,13 +40,15 @@ F16 & B::Send, {Left}
 F16 & F::Send, {Right}
 F16 & P::Send, {Up}
 F16 & N::Send, {Down}
-F16 & A::Send, {Home} ; move cursor to to beginning of line
-F16 & E::Send, {End} ; move cursor to end of line
-F16 & K::Send, +{End}{Delete} ; highlight and delete text right of cursor
-F16 & Up::Send, #{Tab} ; show task view
-F16 & Down::Send, #{Tab} ; show task view
-^!Left::Send, +{Home} ; election selection to beginning of line
-^!Right::Send, +{End} ; election selection to end of line
-#8::SendInput {U+2022} ; add a bullet (•)
+F16 & A::Send, {Home} ;move cursor to to beginning of line
+F16 & E::Send, {End} ;move cursor to end of line
+F16 & K::Send, +{End}{Delete} ;highlight and delete text right of cursor
+F16 & Up::Send, #{Tab} ;show task view
+F16 & Down::Send, #{Tab} ;show task view
+F16 & Left::Send, #{Ctrl}{Left} ; switch to desktop on left
+F16 & Right::Send, #{Ctrl}{Right} ;switch to desktop on right
+^!Left::Send, +{Home} ;election selection to beginning of line
+^!Right::Send, +{End} ;election selection to end of line
+#8::SendInput {U+2022} ;add a bullet (•)
 
 
