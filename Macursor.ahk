@@ -1,18 +1,23 @@
-; =============================================================
-; Macursor shortcuts for Windows 10
-; =============================================================
-; • Install 'SharpKeys' program before using.
-; • Run 'SharpKeys', then remap 'Caps Lock' with 'F16' key.
+; ===============================================================
+; Macursor shortcuts for Windows 10 - Installation instructions
+; ===============================================================
+; 1) Install 'SharpKeys' and 'AutoHotKey' programs
+; 2) Run 'SharpKeys', remap 'Caps Lock' with 'F16' key.
+; 3) Reboot, right click on 'Macursor.ahk', click 'Compile Script'
+; 4) Add compiled script to "/C/'Program Files'/AutoHotKey/" directory
+; 5) Right click on compiled Macursor script, click 'Create Shortcut'
+; 6) Press 'Windows' and 'R' key together, enter 'shell:startup'
+; 7) Drag the Macursor shortcut into the 'startup' directory
 ;
-; =============================================================
+; ===============================================================
 ; ABOUT
-; =============================================================
+; ===============================================================
 ; • Mimics 'Caps Lock' cursor navigation on macOS
 ; • For macOS users who love remapping 'Caps Lock' to 'Ctrl'.
 ;
-; =============================================================
+; ===============================================================
 ; NOTES
-; =============================================================
+; ===============================================================
 ; ! = ALT
 ; ^ = CTRL
 ; + = SHIFT
