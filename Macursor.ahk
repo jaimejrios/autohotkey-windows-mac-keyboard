@@ -23,6 +23,7 @@ F16 & E::Send, {End} ; move cursor to end of line
 F16 & K::Send, +{End}{Delete} ; highlight and delete text right of cursor
 F16 & Up::Send, #{Tab}
 F16 & Down::Send, #{Tab}
+#8::SendInput {U+2022} ; add bullet •
 
 ; --------------------------------------------------------------
 ; Application specific key bindings (example)
