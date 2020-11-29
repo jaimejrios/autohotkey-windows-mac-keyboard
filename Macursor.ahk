@@ -2,7 +2,6 @@
 ; Macursor shortcuts for Windows 10
 ;=========================================
 
-; Debug action snippet: MsgBox You pressed Control-A while Notepad is active.
 
 #InstallKeybdHook
 #SingleInstance force
@@ -13,15 +12,17 @@ SendMode Input
 ; Use SharpKeys program to swap 'Caps Lock' with 'F16'
 ; --------------------------------------------------------------
 
-F16 & D::Send, Delete
-F16 & H::Send, Backspace
-F16 & B::Send, Left
-F16 & F::Send, Right
-F16 & P::Send, Up
-F16 & N::Send, Down
-F16 & A::Send, Ctrl{Home} ; move cursor to to beginning of line
-F16 & E::Send, Ctrl{End} ; move cursor to end of line
-F16 & K::Send, Shift{End}{Delete} ; highlight and delete text right of cursor
+F16 & D::Send, {Delete}
+F16 & H::Send, {Backspace}
+F16 & B::Send, {Left}
+F16 & F::Send, {Right}
+F16 & P::Send, {Up}
+F16 & N::Send, {Down}
+F16 & A::Send, {Home} ; move cursor to to beginning of line
+F16 & E::Send, {End} ; move cursor to end of line
+F16 & K::Send, +{End}{Delete} ; highlight and delete text right of cursor
+F16 & Up::Send, #{Tab}
+F16 & Down::Send, #{Tab}
 
 ; --------------------------------------------------------------
 ; Application specific key bindings (example)
