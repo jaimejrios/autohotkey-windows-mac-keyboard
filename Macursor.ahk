@@ -1,7 +1,24 @@
-;-----------------------------------------
+; =============================================================
 ; Macursor shortcuts for Windows 10
-;=========================================
-
+; =============================================================
+; • Install 'SharpKeys' program before using.
+; • Run 'SharpKeys', then remap 'Caps Lock' with 'F16' key.
+;
+; =============================================================
+; ABOUT
+; =============================================================
+; • Mimics 'Caps Lock' cursor navigation on macOS
+; • For macOS users who love remapping 'Caps Lock' to 'Ctrl'.
+;
+; =============================================================
+; NOTES
+; =============================================================
+; ! = ALT
+; ^ = CTRL
+; + = SHIFT
+; # = WIN
+; 
+; Debug action snippet: MsgBox You pressed Control-A while Notepad is active.
 
 #InstallKeybdHook
 #SingleInstance force
@@ -9,7 +26,7 @@ SetTitleMatchMode 2
 SendMode Input
 
 ; --------------------------------------------------------------
-; Use SharpKeys program to swap 'Caps Lock' with 'F16'
+; KEY-BINDING GUIDE
 ; --------------------------------------------------------------
 
 F16 & D::Send, {Delete}
@@ -27,10 +44,4 @@ F16 & Down::Send, #{Tab} ; show task view
 ^!Right::Send, +{End} ; election selection to end of line
 #8::SendInput {U+2022} ; add a bullet (•)
 
-; --------------------------------------------------------------
-; Application specific key bindings (example)
-; --------------------------------------------------------------
 
-; #IfWinActive, ahk_class Chrome_WidgetWin_1
-; #!i::Send {F12} ; Show Web Developer Tools with cmd + alt + i
-; #!u::Send ^u ; Show source code with cmd + alt + u
