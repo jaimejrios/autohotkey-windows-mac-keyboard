@@ -21,9 +21,11 @@ F16 & N::Send, {Down}
 F16 & A::Send, {Home} ; move cursor to to beginning of line
 F16 & E::Send, {End} ; move cursor to end of line
 F16 & K::Send, +{End}{Delete} ; highlight and delete text right of cursor
-F16 & Up::Send, #{Tab}
-F16 & Down::Send, #{Tab}
-#8::SendInput {U+2022} ; add bullet •
+F16 & Up::Send, #{Tab} ; show task view
+F16 & Down::Send, #{Tab} ; show task view
+^!Left::Send, +{Home} ; election selection to beginning of line
+^!Right::Send, +{End} ; election selection to end of line
+#8::SendInput {U+2022} ; add a bullet (•)
 
 ; --------------------------------------------------------------
 ; Application specific key bindings (example)
