@@ -34,7 +34,7 @@ SendMode Input
 ; KEY-BINDING GUIDE
 ; --------------------------------------------------------------
 
-F16 & Q::Send, {Escape}
+F16 & W::Send, {Escape}
 F16 & D::Send, {Delete}
 F16 & H::Send, {Backspace}
 F16 & B::Send, {Left}
