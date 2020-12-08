@@ -41,6 +41,7 @@ F16 & B::Send, {Left}
 F16 & F::Send, {Right}
 F16 & P::Send, {Up}
 F16 & N::Send, {Down}
+F16 & M::Send, #+{Down} ;minimize current window
 F16 & R::Send, {F2} ;rename a folder/file
 F16 & A::Send, {Home} ;move cursor to to beginning of line
 F16 & E::Send, {End} ;move cursor to end of line
