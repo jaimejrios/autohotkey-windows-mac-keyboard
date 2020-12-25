@@ -23,5 +23,5 @@ Notes
 ------------
 - ! = ALT
 - ^ = CTRL
-- /+ = SHIFT
-- /# = WIN
+- \+ = SHIFT
+- \# = WIN
