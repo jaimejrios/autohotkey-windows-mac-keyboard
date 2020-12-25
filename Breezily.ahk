@@ -14,18 +14,18 @@ SendMode Input
 ; {U+nnnn} = sends a unicode character
 
 ; cursor navigation
-F16 & Q::SendInput, {Escape}
-F16 & D::SendInput, {Delete}
-F16 & H::SendInput, {Backspace}
-F16 & B::SendInput, {Left}
-F16 & F::SendInput, {Right}
-F16 & P::SendInput, {Up}
-F16 & N::SendInput, {Down}
-F16 & A::SendInput, {Home} ;move cursor to beginning of line
-F16 & E::SendInput, {End} ;move cursor to end of line
-F16 & K::SendInput, +{End}{Delete} ;delete text to the right of cursor
-^!Left::SendInput, +{Home} ;extend selection to beginning of line
-^!Right::SendInput, +{End} ;extend selection to end of line
+F16 & Q::Send, {Escape}
+F16 & D::Send, {Delete}
+F16 & H::Send, {Backspace}
+F16 & B::Send, {Left}
+F16 & F::Send, {Right}
+F16 & P::Send, {Up}
+F16 & N::Send, {Down}
+F16 & A::Send, {Home} ;move cursor to beginning of line
+F16 & E::Send, {End} ;move cursor to end of line
+F16 & K::Send, +{End}{Delete} ;delete text to the right of cursor
+^!Left::Send, +{Home} ;extend selection to beginning of line
+^!Right::Send, +{End} ;extend selection to end of line
 
 ; desktop navigation
 F16 & O::Send, #^{vk44} ;create a new virtual desktop
