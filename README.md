@@ -1,13 +1,27 @@
-Use Mac keyboard with AutoHotkey under Windows
+Breezily for Windows 10
 ==============================================
 
-This [AutoHotkey](https://www.autohotkey.com/) configuration file makes usual keyboard shortcuts work with an Apple keyboard on Windows. It has been testet with a german keyboard layout, but should work under different layouts as well.
+This [AutoHotkey](https://www.autohotkey.com/) configuration file makes navigating Windows 10 a breeze. Program is loosely based off macOS cursor navigation controls (when replacing the 'CapsLock' key with 'Ctrl').
 
-If it's not working for applications running with admin permissions, it might be the problem that AHK is not, see [this question on StackOverflow](https://stackoverflow.com/a/8457852/723769).
+Breezily has been tested with an English (United States) keyboard layout, but should work under different layouts as well.
+
 
 Installation
 ------------
 
-- Install [AutoHotkey](https://www.autohotkey.com/) 
-- Run the `MacKeyboard.ahk` file
-- Put the `MacKeyboard.ahk` file or a shortcut to the file in your Autostart folder to run it automatically on startup.
+1) Install [AutoHotkey](https://www.autohotkey.com/)
+2) Install [SharpKeys](https://github.com/randyrants/sharpkeys)
+3) Run 'SharpKeys', remap 'Caps Lock' with 'F16' key.
+4) Reboot
+5) Right click on your 'Macursor.ahk' file, click 'Compile Script'
+6) Add your compiled script (Macursor.exe) to "/C/'Program Files'/AutoHotKey/" directory
+7) Right click on compiled Macursor script, click 'Create Shortcut'
+8) Press 'Windows' and 'R' key together, enter 'shell:startup'
+9) Drag the Macursor shortcut into the 'startup/' directory
+
+Notes
+------------
+- ! = ALT
+- ^ = CTRL
+- + = SHIFT
+- # = WIN
