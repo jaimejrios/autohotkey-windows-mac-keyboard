@@ -1,26 +1,26 @@
 Breezily for Windows 10
-==============================================
+---
 
-This [AutoHotkey](https://www.autohotkey.com/) configuration file makes navigating Windows 10 a breeze. This program is loosely based off macOS cursor navigation controls (when replacing the 'CapsLock' key with 'Ctrl').
+This [AutoHotkey](https://www.autohotkey.com/) app makes navigating Windows 10 a breeze. It's loosely based off macOS cursor navigation controls (when replacing the `Caps Lock` key with `Ctrl`).
 
-Breezily has been tested with an English (United States) keyboard layout, but should work under different layouts as well.
+Breezily has been tested with an English (United States) keyboard layout, but should work under different layouts too. [SharpKeys](https://github.com/randyrants/sharpkeys) is required to use Breezily.
 
-Installation
-------------
+Installation Instructions:
+---
 
-1) Install [AutoHotkey](https://www.autohotkey.com/)
-2) Install [SharpKeys](https://github.com/randyrants/sharpkeys)
-3) Run 'SharpKeys' program
-4) Use the 'SharpKeys' program to remap the 'Caps Lock' key with the 'F16' key
-4) Reboot your PC
-5) Navigate to your downloaded 'Breezily.ahk' file, right click on it, and click 'Compile Script'
-6) Add your compiled script (Breezily.exe) to "/C/'Program Files'/AutoHotKey/" directory
-7) Right click on compiled Breezily script, click 'Create Shortcut'
-8) Press 'Windows' and 'R' key together, enter 'shell:startup'
-9) Drag the Breezily shortcut into the 'startup/' directory
+1) Download and install [AutoHotkey](https://www.autohotkey.com/).
+2) Download the latest release of Breezily.
+3) Add your downloaded `Breezily.exe` file to the `/C/Program Files/AutoHotKey/` folder.
+4) Right click on `Breezily.exe`, click `Create Shortcut`, and add the shortcut to your desktop.
+5) Press the `Windows` and `R` keys together, and enter 'shell:startup'
+6) Drag the Breezily shortcut into the `startup/` folder.
+7) Download and install [SharpKeys](https://github.com/randyrants/sharpkeys).
+8) Run the SharpKeys program.
+9) Use SharpKeys to remap the `Caps Lock` key with `F16`.
+10) Reboot your PC.
 
-AutoHotKey Script Guide
-------------
+AutoHotKey Script Guide:
+---
 - ! = alt
 - ^ = ctrl
 - \+ = shift
