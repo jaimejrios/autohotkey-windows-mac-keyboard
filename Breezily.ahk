@@ -27,20 +27,19 @@ F16 & K::SendInput, +{End}{Delete} ;delete text to the right of cursor
 ^!Left::SendInput, +{Home} ;extend selection to beginning of line
 ^!Right::SendInput, +{End} ;extend selection to end of line
 
+; desktop navigation
+F16 & O::Send, #^{vk44} ;create a new virtual desktop
+F16 & <::SendInput, #^{Left} ; switch to virtual desktop on left
+F16 & >::SendInput, #^{Right} ;switch to virtual desktop on right
+F16 & X::SendInput, #^{F4} ;close active virtual desktop
+F16 & /::SendInput, #{Tab} ;show task view panel
+
 ; window navigation
 F16 & M::SendInput, #+{Down} ;minimize current window
-F16 & <::SendInput, #{Left} ;move current window to left side of screen
-F16 & >::SendInput, #{Right} ;move current window to right side of screen
-F16 & `;::SendInput, #{Up} ;move current window upward
-F16 & /::SendInput, #{Down} ;move current window downward
-
-; desktop navigation
-F16 & Up::SendInput, #{Tab} ;show task view
-F16 & Down::SendInput, #{Tab} ;show task view
-F16 & Left::SendInput, #^{Left} ; switch to desktop on left
-F16 & Right::SendInput, #^{Right} ;switch to desktop on right
-F16 & O::Send, #^{vk44} ;create a new virtual desktop
-F16 & X::SendInput, #^{F4} ;close active virtual desktop
+F16 & Left::SendInput, #{Left} ;move current window to left side of screen
+F16 & Right::SendInput, #{Right} ;move current window to right side of screen
+F16 & Up::SendInput, #{Up} ;move current window up
+F16 & Down::SendInput, #{Down} ;move current window down
 
 ; windows 10 shortcuts
 F16 & Space::SendInput, {LWinDown}{LWinUp} ; press the 'windows' key
