@@ -40,13 +40,13 @@ F16 & X::SendInput, #^{F4} ;close active virtual desktop
 F16 & /::SendInput, #{Tab} ;show task view panel
 
 ; window navigation shortcuts
-F16 & M::SendInput, #+{Down} ;minimize current window
+F16 & M::SendInput, #+{Down} ;minimize the current window
 F16 & Left::SendInput, #{Left} ;move current window to left side of screen
 F16 & Right::SendInput, #{Right} ;move current window to right side of screen
-F16 & Up::SendInput, #{Up} ;move current window up
-F16 & Down::SendInput, #{Down} ;move current window down
+F16 & Up::SendInput, #{Up} ;maximize app windows
+F16 & Down::SendInput, #{Down} ;minimize app windows
 
 ; windows 10 shortcuts
-F16 & Space::SendInput, {LWinDown}{LWinUp} ; press the 'windows' key
-F16 & R::SendInput, {F2} ;rename current directory/file
-F16 & 8::SendInput, {%Bullet_Point%} ;insert a bullet character (•)
+F16 & Space::SendInput, {LWinDown}{LWinUp}
+F16 & R::SendInput, {F2} ;rename a directory/file
+F16 & 8::SendInput, {%Bullet_Point%} ;insert bullet point symbol
