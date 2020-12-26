@@ -22,13 +22,13 @@ Installation Instructions:
 Breezily Shortcut List
 ---
 * Cursor Navigation Shortcuts
-  - `Caps Lock` + `Q` - `Escape`
-  - `Caps Lock` + `D` - `Delete`
-  - `Caps Lock` + `H` - `Backspace`
-  - `Caps Lock` + `B` - `Left`
-  - `Caps Lock` + `F` - `Right`
-  - `Caps Lock` + `P` - `Up`
-  - `Caps Lock` + `N` - `Down`
+  - `Caps Lock` + `Q` - Escape
+  - `Caps Lock` + `D` - Delete
+  - `Caps Lock` + `H` - Backspace
+  - `Caps Lock` + `B` - Left
+  - `Caps Lock` + `F` - Right
+  - `Caps Lock` + `P` - Up
+  - `Caps Lock` + `N` - Down
   - `Caps Lock` + `A` - Move cursor to beginning of line.
   - `Caps Lock` + `E` - Move cursor to end of line.
   - `Caps Lock` + `E` - Delete text to the right of cursor.
@@ -50,22 +50,22 @@ Breezily Shortcut List
   - `Caps Lock` + `Down` - Minimize app windows.
 
 * Windows 10 Shortcuts
-  - `Caps Lock` + `Space` - `Windows` key.
+  - `Caps Lock` + `Space` - Windows key.
   - `Caps Lock` & `R` - Rename directory/file.
   - `Caps Lock` & `8` - Insert a bullet point character.
 
 Hotkey Script Guide:
 ---
-- \; = comment
-- ! = alt
-- ^ = ctrl
-- \+ = shift
-- \# = windows key
-- {vkXX} = sends a keystroke that has a virtual key
-- {U\+nnnn} = sends a unicode character
+- `\;` = comment
+- `!` = alt
+- `^` = ctrl
+- `\+` = shift
+- `\#` = windows key
+- `vkXX` = sends a keystroke that has a virtual key
+- `U\+nnnn` = sends a unicode character
 
 Credits:
 ---
-- The amazing [AutoHotkey Foundation](https://www.autohotkey.com/) and [Community](https://www.autohotkey.com/boards/).
+- The [AutoHotkey Foundation](https://www.autohotkey.com/) and [Community](https://www.autohotkey.com/boards/).
 - [Randy](https://github.com/stroebjo/autohotkey-windows-mac-keyboard) - Creator of [SharpKeys](https://github.com/randyrants/sharpkeys)
 - [Jonathan Ströbele](https://github.com/stroebjo) for the AutoHotkey [template](https://github.com/stroebjo/autohotkey-windows-mac-keyboard).
