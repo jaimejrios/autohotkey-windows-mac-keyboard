@@ -5,7 +5,7 @@ This [AutoHotkey](https://www.autohotkey.com/) app makes navigating Windows 10 a
 
 Breezily has been tested with an English (US) keyboard layout, but should work under different layouts too. [SharpKeys](https://github.com/randyrants/sharpkeys) is required to use Breezily.
 
-Installation Instructions:
+Installation
 ---
 
 1) Download and install [AutoHotkey](https://www.autohotkey.com/).
@@ -54,7 +54,7 @@ Breezily Shortcut List
   - `Caps Lock + R` - Rename directory/file.
   - `Caps Lock + 8` - Insert a bullet point character.
 
-Hotkey Script Guide:
+Hotkey Script Guide
 ---
 - `;` = comment
 - `!` = alt
@@ -64,8 +64,8 @@ Hotkey Script Guide:
 - `vkXX` = sends a keystroke that has a virtual key
 - `U+nnnn` = sends a unicode character
 
-Credits:
+Credits
 ---
 - The [AutoHotkey Foundation](https://www.autohotkey.com/) and [Community](https://www.autohotkey.com/boards/).
-- [Randy](https://github.com/stroebjo/autohotkey-windows-mac-keyboard) - Creator of [SharpKeys](https://github.com/randyrants/sharpkeys)
+- [Randy](https://github.com/stroebjo/autohotkey-windows-mac-keyboard) - Creator of [SharpKeys](https://github.com/randyrants/sharpkeys).
 - [Jonathan Ströbele](https://github.com/stroebjo) - Breezily was inspired from his [work](https://github.com/stroebjo/autohotkey-windows-mac-keyboard).
