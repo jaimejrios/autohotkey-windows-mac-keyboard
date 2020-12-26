@@ -21,7 +21,7 @@ Installation
 
 Breezily Shortcut List
 ---
-* **Cursor Navigation Shortcuts
+* **Cursor Navigation Shortcuts**
   - `Caps Lock + Q` - Escape
   - `Caps Lock + D` - Delete
   - `Caps Lock + H` - Backspace
@@ -35,21 +35,21 @@ Breezily Shortcut List
   - `Ctrl + Alt + Left` - Extend selection to beginning of line.
   - `Ctrl + Alt + Right` - Extend selection to end of line.
 
-* **Desktop Navigation Shortcuts
+* **Desktop Navigation Shortcuts**
   - `Caps Lock + O` - Create a new virtual desktop.
   - `Caps Lock + <` - Switch to virtual desktop on left.
   - `Caps Lock + >` - Switch to virtual desktop on right.
   - `Caps Lock + X` - Close active virtual desktop.
   - `Caps Lock + /` - Show task view panel.
 
-* **Window Navigation Shortcuts
+* **Window Navigation Shortcuts**
   - `Caps Lock + M` - Minimize current window.
   - `Caps Lock + Left` - Move current window to left side of screen.
   - `Caps Lock + Right` - Move current window to right side of screen.
   - `Caps Lock + Up` - Maximize app windows.
   - `Caps Lock + Down` - Minimize app windows.
 
-* **Windows 10 Shortcuts
+* **Windows 10 Shortcuts**
   - `Caps Lock + Space` - Windows key.
   - `Caps Lock + R` - Rename directory/file.
   - `Caps Lock + 8` - Insert a bullet point character.
