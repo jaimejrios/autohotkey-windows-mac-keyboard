@@ -19,40 +19,71 @@ Installation
 9) Use SharpKeys to remap the `Caps Lock` key with `F16`.
 10) Reboot your PC.
 
-Breezily Shortcut List
+Breezily's Shortcut List
 ---
 * **Cursor Navigation Shortcuts**
-  - `Caps Lock + Q` - Escape
-  - `Caps Lock + D` - Delete
-  - `Caps Lock + H` - Backspace
-  - `Caps Lock + B` - Left
-  - `Caps Lock + F` - Right
-  - `Caps Lock + P` - Up
-  - `Caps Lock + N` - Down
+  - `Caps Lock + D` - press Delete key
+  - `Caps Lock + H` - press Backspace key
+  - `Caps Lock + B` - press Left key
+  - `Caps Lock + F` - press Right key
+  - `Caps Lock + P` - press Up key
+  - `Caps Lock + N` - press Down key
   - `Caps Lock + A` - Move cursor to beginning of line.
   - `Caps Lock + E` - Move cursor to end of line.
   - `Caps Lock + E` - Delete text to the right of cursor.
-  - `Ctrl + Alt + Left` - Extend selection to beginning of line.
-  - `Ctrl + Alt + Right` - Extend selection to end of line.
+  - `Alt + <` - Extend selection to beginning of line.
+  - `Alt + >` - Extend selection to end of line.
 
 * **Desktop Navigation Shortcuts**
-  - `Caps Lock + O` - Create a new virtual desktop.
-  - `Caps Lock + <` - Switch to virtual desktop on left.
-  - `Caps Lock + >` - Switch to virtual desktop on right.
-  - `Caps Lock + X` - Close active virtual desktop.
-  - `Caps Lock + /` - Show task view panel.
+  - `Caps Lock + 5` - Create a new virtual desktop.
+  - `Caps Lock + 7` - Switch to virtual desktop on left.
+  - `Caps Lock + 8` - Switch to virtual desktop on right.
+  - `Caps Lock + \` - Close active virtual desktop.
+  - `Caps Lock + 4` - Show task view panel.
 
 * **Window Navigation Shortcuts**
-  - `Caps Lock + M` - Minimize current window.
-  - `Caps Lock + Left` - Move current window to left side of screen.
-  - `Caps Lock + Right` - Move current window to right side of screen.
-  - `Caps Lock + Up` - Maximize app windows.
-  - `Caps Lock + Down` - Minimize app windows.
+    - `Caps Lock + <` - Move current window to left side of screen.
+  - `Caps Lock + >` - Move current window to right side of screen.
+  - `Caps Lock + /` - Maximize app windows.
+  - `Caps Lock + M` - Minimize app windows.
 
-* **Windows 10 Shortcuts**
-  - `Caps Lock + Space` - Windows key.
-  - `Caps Lock + R` - Rename directory/file.
-  - `Caps Lock + 8` - Insert a bullet point character.
+* **Breezily Essential Shortcuts**
+  - `Caps Lock + Q` - press Escape key
+  - `Caps Lock + Space` - press Windows key
+  - `Caps Lock + Up` - press PageUp key
+  - `Caps Lock + Down` - press PageDown key
+  - `Caps Lock + [` - press Ctrl+Shift+Tab keys
+  - `Caps Lock + ]` - press Ctrl+Tab keys
+  - `Caps Lock + Left` - press Ctrl+Shift+Left keys
+  - `Caps Lock + Right` - press Ctrl+Shift+Right keys
+  - `Windows + N` - press F2 key
+  - `Caps Lock + 9` - Insert bullet point symbol.
+  - `Caps Lock + ;` - press Ctrl+A keys
+  - `Caps Lock + '` - press Ctrl+N keys
+  - `Caps Lock + G` - press Ctrl+F keys
+
+* **Ctrl Key Remappings**
+  - `Caps Lock + 0` - press Ctrl+0 keys
+  - `Caps Lock + 1` - press Ctrl+1 keys
+  - `Caps Lock + 2` - press Ctrl+2 keys
+  - `Caps Lock + 3` - press Ctrl+3 keys
+  - `Caps Lock + +` - press Ctrl and + keys
+  - `Caps Lock + -` - press Ctrl and - keys
+  - `Caps Lock + C` - press Ctrl+C keys
+  - `Caps Lock + I` - press Ctrl+I keys
+  - `Caps Lock + J` - press Ctrl+J keys
+  - `Caps Lock + L` - press Ctrl+L keys
+  - `Caps Lock + O` - press Ctrl+O keys
+  - `Caps Lock + R` - press Ctrl+R keys
+  - `Caps Lock + S` - press Ctrl+S keys
+  - `Caps Lock + T` - press Ctrl+T keys
+  - `Caps Lock + U` - press Ctrl+U keys
+  - `Caps Lock + V` - press Ctrl+V keys
+  - `Caps Lock + W` - press Ctrl+W keys
+  - `Caps Lock + X` - press Ctrl+X keys
+  - `Caps Lock + Y` - press Ctrl+Y keys
+  - `Caps Lock + Z` - press Ctrl+Z keys
+  - ``Caps Lock + ` `` - press Ctrl and Backtick keys
 
 Hotkey Script Guide
 ---

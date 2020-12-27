@@ -34,7 +34,7 @@ W=vk57
 X=vk58
 Y=vk59
 Z=vk5A
-Tilda=vkC0
+Backtick=vkC0
 Bullet_Point=U+2022
 ; Left_Bracket=vkDB
 ; Right_Bracket=vkDD
@@ -101,4 +101,4 @@ F16 & W::SendInput, ^{%W%} ;press Ctrl+W
 F16 & X::SendInput, ^{%X%} ;press Ctrl+X
 F16 & Y::SendInput, ^{%Y%} ;press Ctrl+Y
 F16 & Z::SendInput, ^{%Z%} ;press Ctrl+Z
-F16 & `::SendInput, ^{%Tilda%} ;press Ctrl+`
+F16 & `::SendInput, ^{%Backtick%} ;press Ctrl+`
