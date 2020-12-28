@@ -1,104 +1,122 @@
-; autohotkey settings
+;autohotkey settings
 #InstallKeybdHook
 #SingleInstance force
 SetTitleMatchMode 2
 SendMode Input
 
-; breezily hotkey guide
-; =========================
-; semicolons are comments
-; ! = alt
-; ^ = ctrl
-; + = shift
-; # = windows (super) key
-; vkXX = send a keystroke with a virtual key
-; U+nnnn = send a unicode character
+;command variables
+_alt_=!
+_ctrl_=^
+_shift_=+
+_windows_=#
 
-; hotkey variables
-A=vk41
-C=vk43
-D=vk44
-F=vk46
-I=vk49
-J=vk4A
-L=vk4C
-N=vk4E
-O=vk4F
-P=vk50
-R=vk52
-S=vk53
-T=vk54
-U=vk55
-V=vk56
-W=vk57
-X=vk58
-Y=vk59
-Z=vk5A
-Backtick=vkC0
-Bullet_Point=U+2022
-; Left_Bracket=vkDB
-; Right_Bracket=vkDD
+;reserved hotkey variables
+_0_=0
+_1_=1
+_2_=2
+_3_=3
+_bullet_=U+2022 ;unicode symbol
+_backspace_=backspace
+_delete_=delete
+_down_=down
+_end_=end
+_escape_=escape
+_f2_=f2
+_f4_=f4
+_home_=home
+_left_=left
+_minus_=NumpadSub
+_pageup_=PgUp
+_plus_=NumpadAdd
+_pagedown_=PgDn
+_right_=right
+_up_=up
+_tab_=tab
+_winDown_=LWinDown
+_winUp_=LWinUp
 
-; cursor navigation shortcuts
-F16 & D::SendInput, {Delete}
-F16 & H::SendInput, {Backspace}
-F16 & B::SendInput, {Left}
-F16 & F::SendInput, {Right}
-F16 & P::SendInput, {Up}
-F16 & N::SendInput, {Down}
-F16 & A::SendInput, {Home} ;move cursor to beginning of line
-F16 & E::SendInput, {End} ;move cursor to end of line
-F16 & K::SendInput, +{End}{Delete} ;delete text to the right of cursor
-Alt & <::SendInput, +{Home} ;extend selection to beginning of line
-Alt & >::SendInput, +{End} ;extend selection to end of line
+;virtual keycode variables
+_vkA_=vk41
+_vkC_=vk43
+_vkD_=vk44
+_vkF_=vk46
+_vkI_=vk49
+_vkJ_=vk4A
+_vkL_=vk4C
+_vkN_=vk4E
+_vkO_=vk4F
+_vkP_=vk50
+_vkR_=vk52
+_vkS_=vk53
+_vkT_=vk54
+_vkU_=vk55
+_vkV_=vk56
+_vkW_=vk57
+_vkX_=vk58
+_vkY_=vk59
+_vkZ_=vk5A
+_backtick_=vkC0
 
-; desktop navigation shortcuts
-F16 & 4::SendInput, #{Tab} ;show task view panel
-F16 & 7::SendInput, #^{Left} ; switch to virtual desktop on left
-F16 & 8::SendInput, #^{Right} ;switch to virtual desktop on right
-F16 & \::SendInput, #^{F4} ;close active virtual desktop
-F16 & 5::Send, #^{%D%} ;create a new virtual desktop
+;cursor navigation shortcuts
+F16 & D::SendInput, {%_delete_%}
+F16 & H::SendInput, {%_backspace_%}
+F16 & B::SendInput, {%_left_%}
+F16 & F::SendInput, {%_right_%}
+F16 & P::SendInput, {%_up_%}
+F16 & N::SendInput, {%_down_%}
+Alt & P::SendInput, {%_pageup_%}
+Alt & N::SendInput, {%_pagedown_%}
+F16 & A::SendInput, {%_home_%} ;moveToBegOfLine
+F16 & E::SendInput, {%_end_%} ;moveToEndOfLine
+F16 & K::SendInput, %_shift_%{%_end_%}{%_delete_%} ;deleteLine
+Alt & {::SendInput, %_shift_%{%_home_%} ;highlightToBegOfLine
+Alt & }::SendInput, %_shift_%{%_end_%} ;highlightToEndOfLine
+Alt & <::SendInput, %_ctrl_%%_shift_%{%_left_%} ;extendToBegOfLine
+Alt & >::SendInput, %_ctrl_%%_shift_%{%_right_%} ;extendToEndOfLine
 
-; window navigation shortcuts
-F16 & <::SendInput, #{Left} ;move current window to left side of screen
-F16 & >::SendInput, #{Right} ;move current window to right side of screen
-F16 & /::SendInput, #{Up} ;maximize app windows
-F16 & M::SendInput, #{Down} ;minimize app windows
+;desktop navigation shortcuts
+F16 & 4::SendInput, %_windows_%{%_tab_%} ;showTaskView
+F16 & 7::SendInput, %_windows_%%_ctrl_%{%_left_%} ;switchToLeftDesktop
+F16 & 8::SendInput, %_windows_%%_ctrl_%{%_right_%} ;switchToRightDesktop
+F16 & \::SendInput, %_windows_%%_ctrl_%{%_f4_%} ;closeDesktop
+F16 & 5::Send, %_windows_%%_ctrl_%{%_vkD_%} ;newDesktop
 
-; breezily essential shortcuts
-F16 & Q::SendInput, {Escape} ;press Escape key
-F16 & Space::SendInput, {LWinDown}{LWinUp} ;press Windows key
-F16 & Up::SendInput, {PgUp} ;press PageUp key
-F16 & Down::SendInput, {PgDn} ;press PageDown key
-F16 & ]::Send, ^{Tab} ;press Ctrl+Tab (useful for quickly switching to next tab)
-F16 & [::Send, ^+{Tab} ;press Ctrl+Shift+Tab (useful for quickly switching to previous tab)
-F16 & Left::SendInput, ^+{Left} ;press Ctrl+Shift+Left keys
-F16 & Right::SendInput, ^+{Right} ;press Ctrl+Shift+Right keys
-#N::SendInput, {F2} ;rename a directory/file
-F16 & 9::SendInput, {%Bullet_Point%} ;insert bullet point symbol
-F16 & `;::SendInput, ^{%A%} ;press Ctrl+A keys (useful for quickly highlighting entire text)
-F16 & '::SendInput, ^{%N%} ;press Ctrl+N keys (useful for quickly opening a new page)
-F16 & G::SendInput, ^{%F%} ;press Ctrl+F keys (useful for quickly opening find/search)
+;window navigation shortcuts
+F16 & <::SendInput, %_windows_%{%_left_%} ;moveWindowLeft
+F16 & >::SendInput, %_windows_%{%_right_%} ;moveWindowRight
+F16 & /::SendInput, %_windows_%{%_up_%} ;maximizeWindows
+F16 & M::SendInput, %_windows_%{%_down_%} ;minimizeWindows
 
-; like-for-like ctrl key remappings
-F16 & 0::SendInput, ^{0} ;press Ctrl+0
-F16 & 1::SendInput, ^{1} ;press Ctrl+1
-F16 & 2::SendInput, ^{2} ;press Ctrl+2
-F16 & 3::SendInput, ^{3} ;press Ctrl+3
-F16 & +::SendInput, ^{NumpadAdd} ;press Ctrl++
-F16 & -::SendInput, ^{NumpadSub} ;press Ctrl+-
-F16 & C::SendInput, ^{%C%} ;press Ctrl+C
-F16 & I::SendInput, ^{%I%} ;press Ctrl+I
-F16 & J::SendInput, ^{%J%} ;press Ctrl+J
-F16 & L::SendInput, ^{%L%} ;press Ctrl+L
-F16 & O::SendInput, ^{%O%} ;press Ctrl+O
-F16 & R::SendInput, ^{%R%} ;press Ctrl+R
-F16 & S::SendInput, ^{%S%} ;press Ctrl+S
-F16 & T::SendInput, ^{%T%} ;press Ctrl+T
-F16 & U::SendInput, ^{%U%} ;press Ctrl+U
-F16 & V::SendInput, ^{%V%} ;press Ctrl+V
-F16 & W::SendInput, ^{%W%} ;press Ctrl+W
-F16 & X::SendInput, ^{%X%} ;press Ctrl+X
-F16 & Y::SendInput, ^{%Y%} ;press Ctrl+Y
-F16 & Z::SendInput, ^{%Z%} ;press Ctrl+Z
-F16 & `::SendInput, ^{%Backtick%} ;press Ctrl+`
+;breezily essential shortcuts
+F16 & Q::SendInput, {%_escape_%}
+F16 & Space::SendInput, {%_winDown_%}{%_winUp_%}
+F16 & 9::SendInput, {%_bullet_%}
+F16 & ]::Send, %_ctrl_%{%_tab_%} ;nextView
+F16 & [::Send, %_ctrl_%%_shift_%{%_tab_%} ;previousView
+F16 & `;::SendInput, %_ctrl_%{%_vkA_%} ;selectAll
+F16 & '::SendInput, %_ctrl_%{%_vkN_%} ;openNew
+F16 & G::SendInput, %_ctrl_%{%_vkF_%} ;openFind
+#N::SendInput, {%_f2_%} ;rename
+
+;like-for-like ctrl key remappings
+F16 & 0::SendInput, %_ctrl_%{%_0_%}
+F16 & 1::SendInput, %_ctrl_%{%_1_%}
+F16 & 2::SendInput, %_ctrl_%{%_2_%}
+F16 & 3::SendInput, %_ctrl_%{%_3_%}
+F16 & +::SendInput, %_ctrl_%{%_plus_%}
+F16 & -::SendInput, %_ctrl_%{%_minus_%}
+F16 & C::SendInput, %_ctrl_%{%_vkC_%}
+F16 & I::SendInput, %_ctrl_%{%_vkI_%}
+F16 & J::SendInput, %_ctrl_%{%_vkJ_%}
+F16 & L::SendInput, %_ctrl_%{%_vkL_%}
+F16 & O::SendInput, %_ctrl_%{%_vkO_%}
+F16 & R::SendInput, %_ctrl_%{%_vkR_%}
+F16 & S::SendInput, %_ctrl_%{%_vkS_%}
+F16 & T::SendInput, %_ctrl_%{%_vkT_%}
+F16 & U::SendInput, %_ctrl_%{%_vkU_%}
+F16 & V::SendInput, %_ctrl_%{%_vkV_%}
+F16 & W::SendInput, %_ctrl_%{%_vkW_%}
+F16 & X::SendInput, %_ctrl_%{%_vkX_%}
+F16 & Y::SendInput, %_ctrl_%{%_vkY_%}
+F16 & Z::SendInput, %_ctrl_%{%_vkZ_%}
+F16 & `::SendInput, %_ctrl_%{%_backtick_%}

@@ -1,3 +1,4 @@
+
 Breezily for Windows 10
 ---
 
@@ -22,78 +23,78 @@ Installation
 Breezily's Shortcut List
 ---
 * **Cursor Navigation Shortcuts**
-  - `Caps Lock + D` - press Delete key
-  - `Caps Lock + H` - press Backspace key
-  - `Caps Lock + B` - press Left key
-  - `Caps Lock + F` - press Right key
-  - `Caps Lock + P` - press Up key
-  - `Caps Lock + N` - press Down key
-  - `Caps Lock + A` - Move cursor to beginning of line.
-  - `Caps Lock + E` - Move cursor to end of line.
-  - `Caps Lock + E` - Delete text to the right of cursor.
-  - `Alt + <` - Extend selection to beginning of line.
-  - `Alt + >` - Extend selection to end of line.
+  - `Caps Lock + D` - Delete
+  - `Caps Lock + H` - Backspace
+  - `Caps Lock + B` - Left
+  - `Caps Lock + F` - Right
+  - `Caps Lock + P` - Up
+  - `Caps Lock + N` - Down
+  - `Caps Lock + A` - Move to beginning of line
+  - `Caps Lock + E` - Move to end of line
+  - `Caps Lock + K` - Delete line
+  - `Alt + <` - Extend selection towards beginning of line
+  - `Alt + >` - Extend selection towards end of line
+  - `Alt + {` - Highlight selection to beginning of line
+  - `Alt + }` - Highlight selection to end of line
 
 * **Desktop Navigation Shortcuts**
-  - `Caps Lock + 5` - Create a new virtual desktop.
-  - `Caps Lock + 7` - Switch to virtual desktop on left.
-  - `Caps Lock + 8` - Switch to virtual desktop on right.
-  - `Caps Lock + \` - Close active virtual desktop.
-  - `Caps Lock + 4` - Show task view panel.
+  - `Caps Lock + 5` - Create a new virtual desktop
+  - `Caps Lock + 7` - Switch to left virtual desktop
+  - `Caps Lock + 8` - Switch to right virtual desktop
+  - `Caps Lock + \` - Close active virtual desktop
+  - `Caps Lock + 4` - Show task view panel
 
 * **Window Navigation Shortcuts**
-    - `Caps Lock + <` - Move current window to left side of screen.
-  - `Caps Lock + >` - Move current window to right side of screen.
-  - `Caps Lock + /` - Maximize app windows.
-  - `Caps Lock + M` - Minimize app windows.
+    - `Caps Lock + <` - Move current window to left side of screen
+  - `Caps Lock + >` - Move current window to right side of screen
+  - `Caps Lock + /` - Maximize app windows
+  - `Caps Lock + M` - Minimize app windows
 
 * **Breezily Essential Shortcuts**
-  - `Caps Lock + Q` - press Escape key
-  - `Caps Lock + Space` - press Windows key
-  - `Caps Lock + Up` - press PageUp key
-  - `Caps Lock + Down` - press PageDown key
-  - `Caps Lock + [` - press Ctrl+Shift+Tab keys
-  - `Caps Lock + ]` - press Ctrl+Tab keys
-  - `Caps Lock + Left` - press Ctrl+Shift+Left keys
-  - `Caps Lock + Right` - press Ctrl+Shift+Right keys
-  - `Windows + N` - press F2 key
-  - `Caps Lock + 9` - Insert bullet point symbol.
-  - `Caps Lock + ;` - press Ctrl+A keys
-  - `Caps Lock + '` - press Ctrl+N keys
-  - `Caps Lock + G` - press Ctrl+F keys
+  - `Caps Lock + Q` - Escape
+  - `Caps Lock + Space` - Start Menu
+  - `Alt + P` - PageUp
+  - `Alt + N` - PageDown
+  - `Caps Lock + [` - Previous View
+  - `Caps Lock + ]` - Next View
+  - `Windows + N` - Rename
+  - `Caps Lock + 9` - Insert bullet symbol
+  - `Caps Lock + ;` - Select All
+  - `Caps Lock + '` - Open New
+  - `Caps Lock + G` - Open Find
 
 * **Ctrl Key Remappings**
-  - `Caps Lock + 0` - press Ctrl+0 keys
-  - `Caps Lock + 1` - press Ctrl+1 keys
-  - `Caps Lock + 2` - press Ctrl+2 keys
-  - `Caps Lock + 3` - press Ctrl+3 keys
-  - `Caps Lock + +` - press Ctrl and + keys
-  - `Caps Lock + -` - press Ctrl and - keys
-  - `Caps Lock + C` - press Ctrl+C keys
-  - `Caps Lock + I` - press Ctrl+I keys
-  - `Caps Lock + J` - press Ctrl+J keys
-  - `Caps Lock + L` - press Ctrl+L keys
-  - `Caps Lock + O` - press Ctrl+O keys
-  - `Caps Lock + R` - press Ctrl+R keys
-  - `Caps Lock + S` - press Ctrl+S keys
-  - `Caps Lock + T` - press Ctrl+T keys
-  - `Caps Lock + U` - press Ctrl+U keys
-  - `Caps Lock + V` - press Ctrl+V keys
-  - `Caps Lock + W` - press Ctrl+W keys
-  - `Caps Lock + X` - press Ctrl+X keys
-  - `Caps Lock + Y` - press Ctrl+Y keys
-  - `Caps Lock + Z` - press Ctrl+Z keys
-  - ``Caps Lock + ` `` - press Ctrl and Backtick keys
+  - `Caps Lock + 0` - Ctrl+0
+  - `Caps Lock + 1` - Ctrl+1
+  - `Caps Lock + 2` - Ctrl+2
+  - `Caps Lock + 3` - Ctrl+3
+  - `Caps Lock + +` - Ctrl and +
+  - `Caps Lock + -` - Ctrl and -
+  - `Caps Lock + C` - Ctrl+C
+  - `Caps Lock + I` - Ctrl+I
+  - `Caps Lock + J` - Ctrl+J
+  - `Caps Lock + L` - Ctrl+L
+  - `Caps Lock + O` - Ctrl+O
+  - `Caps Lock + R` - Ctrl+R
+  - `Caps Lock + S` - Ctrl+S
+  - `Caps Lock + T` - Ctrl+T
+  - `Caps Lock + U` - Ctrl+U
+  - `Caps Lock + V` - Ctrl+V
+  - `Caps Lock + W` - Ctrl+W
+  - `Caps Lock + X` - Ctrl+X
+  - `Caps Lock + Y` - Ctrl+Y
+  - `Caps Lock + Z` - Ctrl+Z
+  - ``Caps Lock + ` `` - Ctrl+\`
 
-Hotkey Script Guide
+AutoHotkey Guide
 ---
 - `;` = comment
 - `!` = alt
 - `^` = ctrl
 - `+` = shift
-- `#` = windows key
-- `vkXX` = sends a keystroke that has a virtual key
-- `U+nnnn` = sends a unicode character
+- `#` = windows
+- `vkXX` = send keystroke with virtual key
+- `U+nnnn` = send a unicode character
 
 Credits
 ---
