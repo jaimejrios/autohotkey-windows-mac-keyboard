@@ -60,6 +60,7 @@ Breezily's Shortcut List
   - `Windows + N` - Rename
   - `Caps Lock + \` - Insert bullet symbol
   - `Caps Lock + ;` - Select All
+  - `Alt + ;` - Deselect All
   - `Caps Lock + '` - Open New
   - `Caps Lock + G` - Open Find
 

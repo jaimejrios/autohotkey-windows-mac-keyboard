@@ -1,3 +1,4 @@
+
 ;autohotkey settings
 #InstallKeybdHook
 #SingleInstance force
@@ -25,6 +26,7 @@ _f2_=f2
 _f4_=f4
 _home_=home
 _left_=left
+_leftClick_=LButton
 _minus_=NumpadSub
 _pageup_=PgUp
 _plus_=NumpadAdd
@@ -93,9 +95,10 @@ F16 & Space::SendInput, {%_winDown_%}{%_winUp_%}
 F16 & \::SendInput, {%_bullet_%}
 F16 & ]::Send, %_ctrl_%{%_tab_%} ;nextView
 F16 & [::Send, %_ctrl_%%_shift_%{%_tab_%} ;previousView
-F16 & `;::SendInput, %_ctrl_%{%_vkA_%} ;selectAll
-F16 & '::SendInput, %_ctrl_%{%_vkN_%} ;openNew
 F16 & G::SendInput, %_ctrl_%{%_vkF_%} ;openFind
+F16 & '::SendInput, %_ctrl_%{%_vkN_%} ;openNew
+F16 & `;::SendInput, %_ctrl_%{%_vkA_%} ;selectAll
+Alt & `;::SendInput, {%_leftClick_%} ;deselectAll
 #N::SendInput, {%_f2_%} ;rename
 
 ;like-for-like ctrl key remappings
