@@ -76,21 +76,21 @@ Alt & >::SendInput, %_ctrl_%%_shift_%{%_right_%} ;extendToEndOfLine
 
 ;desktop navigation shortcuts
 F16 & 4::SendInput, %_windows_%{%_tab_%} ;showTaskView
+F16 & 5::SendInput, %_windows_%%_ctrl_%{%_right_%} ;switchToRightDesktop
 F16 & 7::SendInput, %_windows_%%_ctrl_%{%_left_%} ;switchToLeftDesktop
-F16 & 8::SendInput, %_windows_%%_ctrl_%{%_right_%} ;switchToRightDesktop
-F16 & \::SendInput, %_windows_%%_ctrl_%{%_f4_%} ;closeDesktop
-F16 & 5::Send, %_windows_%%_ctrl_%{%_vkD_%} ;newDesktop
+F16 & 8::Send, %_windows_%%_ctrl_%{%_vkD_%} ;newDesktop
+F16 & 9::SendInput, %_windows_%%_ctrl_%{%_f4_%} ;closeDesktop
 
 ;window navigation shortcuts
+F16 & M::SendInput, %_windows_%{%_down_%} ;minimizeWindows
 F16 & <::SendInput, %_windows_%{%_left_%} ;moveWindowLeft
 F16 & >::SendInput, %_windows_%{%_right_%} ;moveWindowRight
 F16 & /::SendInput, %_windows_%{%_up_%} ;maximizeWindows
-F16 & M::SendInput, %_windows_%{%_down_%} ;minimizeWindows
 
 ;breezily essential shortcuts
 F16 & Q::SendInput, {%_escape_%}
 F16 & Space::SendInput, {%_winDown_%}{%_winUp_%}
-F16 & 9::SendInput, {%_bullet_%}
+F16 & \::SendInput, {%_bullet_%}
 F16 & ]::Send, %_ctrl_%{%_tab_%} ;nextView
 F16 & [::Send, %_ctrl_%%_shift_%{%_tab_%} ;previousView
 F16 & `;::SendInput, %_ctrl_%{%_vkA_%} ;selectAll

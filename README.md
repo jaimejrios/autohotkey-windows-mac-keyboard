@@ -38,17 +38,17 @@ Breezily's Shortcut List
   - `Alt + }` - Highlight selection to end of line
 
 * **Desktop Navigation Shortcuts**
-  - `Caps Lock + 5` - Create a new virtual desktop
-  - `Caps Lock + 7` - Switch to left virtual desktop
-  - `Caps Lock + 8` - Switch to right virtual desktop
-  - `Caps Lock + \` - Close active virtual desktop
   - `Caps Lock + 4` - Show task view panel
+  - `Caps Lock + 5` - Switch to right virtual desktop
+  - `Caps Lock + 7` - Switch to left virtual desktop
+  - `Caps Lock + 8` - Create a new virtual desktop
+  - `Caps Lock + 9` - Close active virtual desktop
 
 * **Window Navigation Shortcuts**
-    - `Caps Lock + <` - Move current window to left side of screen
+  - `Caps Lock + M` - Minimize app windows
+  - `Caps Lock + <` - Move current window to left side of screen
   - `Caps Lock + >` - Move current window to right side of screen
   - `Caps Lock + /` - Maximize app windows
-  - `Caps Lock + M` - Minimize app windows
 
 * **Breezily Essential Shortcuts**
   - `Caps Lock + Q` - Escape
@@ -58,7 +58,7 @@ Breezily's Shortcut List
   - `Caps Lock + [` - Previous View
   - `Caps Lock + ]` - Next View
   - `Windows + N` - Rename
-  - `Caps Lock + 9` - Insert bullet symbol
+  - `Caps Lock + \` - Insert bullet symbol
   - `Caps Lock + ;` - Select All
   - `Caps Lock + '` - Open New
   - `Caps Lock + G` - Open Find
