@@ -10,7 +10,7 @@ Installation
 ---
 
 1) Download and install [AutoHotkey](https://www.autohotkey.com/).
-2) Download the latest release of Breezily.
+2) Download the latest [release](https://github.com/jairio3/breezily/releases) of Breezily.
 3) Add your downloaded `Breezily.exe` file to the `/C/Program Files/AutoHotkey/` directory.
 4) Right click on `Breezily.exe`, click `Create Shortcut`, and add the shortcut to your desktop.
 5) Press the `Windows` and `R` keys together, and enter `shell:startup`.
