@@ -29,6 +29,11 @@ Breezily's Shortcut List
   - `Caps Lock + F` - Right
   - `Caps Lock + P` - Up
   - `Caps Lock + N` - Down
+  - `Alt + P` - PageUp
+  - `Alt + N` - PageDown
+  - `Caps Lock + ;` - Select All
+  - `Alt + ;` - Deselect All
+  - `Windows + N` - Rename
   - `Caps Lock + A` - Move to beginning of line
   - `Caps Lock + E` - Move to end of line
   - `Caps Lock + K` - Delete line
@@ -53,16 +58,11 @@ Breezily's Shortcut List
 * **Breezily Essential Shortcuts**
   - `Caps Lock + Q` - Escape
   - `Caps Lock + Space` - Start Menu
-  - `Alt + P` - PageUp
-  - `Alt + N` - PageDown
   - `Caps Lock + [` - Previous View
   - `Caps Lock + ]` - Next View
-  - `Windows + N` - Rename
-  - `Caps Lock + \` - Insert bullet symbol
-  - `Caps Lock + ;` - Select All
-  - `Alt + ;` - Deselect All
   - `Caps Lock + '` - Open New
   - `Caps Lock + G` - Open Find
+  - `Caps Lock + \` - Insert bullet symbol
 
 * **Ctrl Key Remappings**
   - `Caps Lock + 0` - Ctrl+0

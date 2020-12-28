@@ -98,8 +98,13 @@ F16 & [::Send, %_ctrl_%%_shift_%{%_tab_%} ;previousView
 F16 & G::SendInput, %_ctrl_%{%_vkF_%} ;openFind
 F16 & '::SendInput, %_ctrl_%{%_vkN_%} ;openNew
 F16 & `;::SendInput, %_ctrl_%{%_vkA_%} ;selectAll
-Alt & `;::SendInput, {%_leftClick_%} ;deselectAll
 #N::SendInput, {%_f2_%} ;rename
+Alt & `;:: ;centerCursorClick
+  WinGetPos, X, Y, WindowWidth, WindowHeight, A
+  _widthDividedByTwo_ := WindowWidth / 2
+  _heightDividedByTwo_ := WindowHeight / 2
+  Send, {Click, %_widthDividedByTwo_%, %_heightDividedByTwo_%}
+  return
 
 ;like-for-like ctrl key remappings
 F16 & 0::SendInput, %_ctrl_%{%_0_%}
