@@ -2,7 +2,7 @@
 Breezily for Windows 10
 ---
 
-This [AutoHotkey](https://www.autohotkey.com/) app makes navigating Windows 10 a breeze. It's loosely based off macOS cursor navigation controls (when replacing the `Caps Lock` key with `Ctrl`).
+This [AutoHotkey](https://www.autohotkey.com/) app helps make Windows a breeze to navigate. It's loosely based off macOS cursor navigation controls (when replacing the `Caps Lock` key with `Ctrl`).
 
 Breezily has been tested with an English (US) keyboard layout, but should work under different layouts too. [SharpKeys](https://github.com/randyrants/sharpkeys) is required to use Breezily.
 
