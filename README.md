@@ -11,14 +11,17 @@ Installation
 
 1) Download and install [AutoHotkey](https://www.autohotkey.com/).
 2) Download the latest [release](https://github.com/jairio3/breezily/releases) of Breezily.
-3) Add your downloaded `Breezily.exe` file to the `/C/Program Files/AutoHotkey/` directory.
+3) Add your downloaded `Breezily.exe` file to the `/Local Disk (C:)/Program Files/AutoHotkey/` directory.
 4) Right click on `Breezily.exe`, click `Create Shortcut`, and add the shortcut to your desktop.
 5) Press the `Windows` and `R` keys together, and enter `shell:startup`.
 6) Drag the Breezily shortcut into the `startup/` directory.
 7) Download and install [SharpKeys](https://github.com/randyrants/sharpkeys).
 8) Run the SharpKeys program.
-9) Use SharpKeys to remap the `Caps Lock` key with `F16`.
+9) Use SharpKeys to remap the `Caps Lock` key with `F16` ([instructions](https://www.pcmag.com/how-to/how-to-remap-your-keyboard)).
 10) Reboot your PC.
+11) Press the `Windows` key and type `Snap Settings`, press `Enter`
+12) Leave the `Snap Windows` option turned on, and uncheck all other options.
+13) You're all done! Enjoy Breezily :)
 
 Breezily's Shortcut List
 ---
@@ -32,7 +35,7 @@ Breezily's Shortcut List
   - `Alt + P` - PageUp
   - `Alt + N` - PageDown
   - `Caps Lock + ;` - Select All
-  - `Alt + ;` - Deselect All
+  - `Alt + ;` - Deselect All (center cursor click on current window)
   - `Windows + N` - Rename
   - `Caps Lock + A` - Move to beginning of line
   - `Caps Lock + E` - Move to end of line
@@ -41,6 +44,8 @@ Breezily's Shortcut List
   - `Alt + >` - Extend selection towards end of line
   - `Alt + {` - Highlight selection to beginning of line
   - `Alt + }` - Highlight selection to end of line
+  - `Caps Lock + U` - Extend selection upwards
+  - `Caps Lock + J` - Extend selection downwards
 
 * **Desktop Navigation Shortcuts**
   - `Caps Lock + 4` - Show task view panel
@@ -58,10 +63,14 @@ Breezily's Shortcut List
 * **Breezily Essential Shortcuts**
   - `Caps Lock + Q` - Escape
   - `Caps Lock + Space` - Start Menu
-  - `Caps Lock + [` - Previous View
   - `Caps Lock + ]` - Next View
-  - `Caps Lock + '` - Open New
+  - `Caps Lock + [` - Previous View
   - `Caps Lock + G` - Open Find
+  - `Caps Lock + '` - Open New
+  - `Window + N` - Rename Selection
+  - `Alt + Backspace` - Right Click
+  - `Alt + \` - Toggle taskbar buttons
+  - `Caps Lock & Enter` - Ctrl + P
   - `Caps Lock + \` - Insert bullet symbol
 
 * **Ctrl Key Remappings**
