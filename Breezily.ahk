@@ -27,6 +27,7 @@ _f4_=f4
 _home_=home
 _left_=left
 _leftClick_=LButton
+_rightClick_=AppsKey
 _minus_=NumpadSub
 _pageup_=PgUp
 _plus_=NumpadAdd
@@ -36,38 +37,37 @@ _up_=up
 _tab_=tab
 _winDown_=LWinDown
 _winUp_=LWinUp
-
-;virtual keycode variables
-_vkA_=vk41
-_vkC_=vk43
-_vkD_=vk44
-_vkF_=vk46
-_vkI_=vk49
-_vkJ_=vk4A
-_vkL_=vk4C
-_vkN_=vk4E
-_vkO_=vk4F
-_vkP_=vk50
-_vkR_=vk52
-_vkS_=vk53
-_vkT_=vk54
-_vkU_=vk55
-_vkV_=vk56
-_vkW_=vk57
-_vkX_=vk58
-_vkY_=vk59
-_vkZ_=vk5A
+_virtualKeyA_=vk41
+_virtualKeyB_=vk42
+_virtualKeyC_=vk43
+_virtualKeyD_=vk44
+_virtualKeyF_=vk46
+_virtualKeyI_=vk49
+_virtualKeyJ_=vk4A
+_virtualKeyL_=vk4C
+_virtualKeyN_=vk4E
+_virtualKeyO_=vk4F
+_virtualKeyP_=vk50
+_virtualKeyR_=vk52
+_virtualKeyS_=vk53
+_virtualKeyT_=vk54
+_virtualKeyU_=vk55
+_virtualKeyV_=vk56
+_virtualKeyW_=vk57
+_virtualKeyX_=vk58
+_virtualKeyY_=vk59
+_virtualKeyZ_=vk5A
 _backtick_=vkC0
 
 ;cursor navigation shortcuts
-F16 & D::SendInput, {%_delete_%}
-F16 & H::SendInput, {%_backspace_%}
-F16 & B::SendInput, {%_left_%}
-F16 & F::SendInput, {%_right_%}
-F16 & P::SendInput, {%_up_%}
-F16 & N::SendInput, {%_down_%}
-Alt & P::SendInput, {%_pageup_%}
-Alt & N::SendInput, {%_pagedown_%}
+F16 & D::SendInput, {%_delete_%} ;pressDeletekey
+F16 & H::SendInput, {%_backspace_%} ;pressBackspaceKey
+F16 & B::SendInput, {%_left_%} ;pressLeftKey
+F16 & F::SendInput, {%_right_%} ;pressRightKey
+F16 & P::SendInput, {%_up_%} ;pressUpKey
+F16 & N::SendInput, {%_down_%} ;pressDownKey
+Alt & P::SendInput, {%_pageup_%} ;pressPgUpKey
+Alt & N::SendInput, {%_pagedown_%} ;pressPgDnKey
 F16 & A::SendInput, {%_home_%} ;moveToBegOfLine
 F16 & E::SendInput, {%_end_%} ;moveToEndOfLine
 F16 & K::SendInput, %_shift_%{%_end_%}{%_delete_%} ;deleteLine
@@ -75,12 +75,15 @@ Alt & {::SendInput, %_shift_%{%_home_%} ;highlightToBegOfLine
 Alt & }::SendInput, %_shift_%{%_end_%} ;highlightToEndOfLine
 Alt & <::SendInput, %_ctrl_%%_shift_%{%_left_%} ;extendToBegOfLine
 Alt & >::SendInput, %_ctrl_%%_shift_%{%_right_%} ;extendToEndOfLine
+Alt & T::SendInput, %_shift_%{%_up_%} ;extendSelectionUpwards
+Alt & B::SendInput, %_shift_%{%_down_%} ;extendSelectionDownwards
+
 
 ;desktop navigation shortcuts
 F16 & 4::SendInput, %_windows_%{%_tab_%} ;showTaskView
 F16 & 5::SendInput, %_windows_%%_ctrl_%{%_right_%} ;switchToRightDesktop
 F16 & 7::SendInput, %_windows_%%_ctrl_%{%_left_%} ;switchToLeftDesktop
-F16 & 8::Send, %_windows_%%_ctrl_%{%_vkD_%} ;newDesktop
+F16 & 8::Send, %_windows_%%_ctrl_%{%_virtualKeyD_%} ;newDesktop
 F16 & 9::SendInput, %_windows_%%_ctrl_%{%_f4_%} ;closeDesktop
 
 ;window navigation shortcuts
@@ -90,15 +93,19 @@ F16 & >::SendInput, %_windows_%{%_right_%} ;moveWindowRight
 F16 & /::SendInput, %_windows_%{%_up_%} ;maximizeWindows
 
 ;breezily essential shortcuts
-F16 & Q::SendInput, {%_escape_%}
-F16 & Space::SendInput, {%_winDown_%}{%_winUp_%}
-F16 & \::SendInput, {%_bullet_%}
+F16 & Q::SendInput, {%_escape_%} ;pressEscapeKey
+F16 & Space::SendInput, {%_winDown_%}{%_winUp_%} ;pressWindowsKey
 F16 & ]::Send, %_ctrl_%{%_tab_%} ;nextView
 F16 & [::Send, %_ctrl_%%_shift_%{%_tab_%} ;previousView
-F16 & G::SendInput, %_ctrl_%{%_vkF_%} ;openFind
-F16 & '::SendInput, %_ctrl_%{%_vkN_%} ;openNew
-F16 & `;::SendInput, %_ctrl_%{%_vkA_%} ;selectAll
-#N::SendInput, {%_f2_%} ;rename
+F16 & G::SendInput, %_ctrl_%{%_virtualKeyF_%} ;openFind
+F16 & '::SendInput, %_ctrl_%{%_virtualKeyN_%} ;openNew
+F16 & `;::SendInput, %_ctrl_%{%_virtualKeyA_%} ;selectAll
+F16 & \::SendInput, %_ctrl_%{%_virtualKeyP_%} ;pressCtrlAndP
+F16 & Backspace::SendInput, {%_bullet_%} ;insertBulletSymbol
+#N::SendInput, {%_f2_%} ;renameSelection
+Alt & Backspace::Send, {%_rightClick_%} ;rightMouseClick
+Alt & \::SendInput, %_windows_%{%_virtualKeyB_%} ;
+
 Alt & `;:: ;centerCursorClick
   WinGetPos, X, Y, WindowWidth, WindowHeight, A
   _widthDividedByTwo_ := WindowWidth / 2
@@ -107,24 +114,24 @@ Alt & `;:: ;centerCursorClick
   return
 
 ;like-for-like ctrl key remappings
-F16 & 0::SendInput, %_ctrl_%{%_0_%}
-F16 & 1::SendInput, %_ctrl_%{%_1_%}
-F16 & 2::SendInput, %_ctrl_%{%_2_%}
-F16 & 3::SendInput, %_ctrl_%{%_3_%}
-F16 & +::SendInput, %_ctrl_%{%_plus_%}
-F16 & -::SendInput, %_ctrl_%{%_minus_%}
-F16 & C::SendInput, %_ctrl_%{%_vkC_%}
-F16 & I::SendInput, %_ctrl_%{%_vkI_%}
-F16 & J::SendInput, %_ctrl_%{%_vkJ_%}
-F16 & L::SendInput, %_ctrl_%{%_vkL_%}
-F16 & O::SendInput, %_ctrl_%{%_vkO_%}
-F16 & R::SendInput, %_ctrl_%{%_vkR_%}
-F16 & S::SendInput, %_ctrl_%{%_vkS_%}
-F16 & T::SendInput, %_ctrl_%{%_vkT_%}
-F16 & U::SendInput, %_ctrl_%{%_vkU_%}
-F16 & V::SendInput, %_ctrl_%{%_vkV_%}
-F16 & W::SendInput, %_ctrl_%{%_vkW_%}
-F16 & X::SendInput, %_ctrl_%{%_vkX_%}
-F16 & Y::SendInput, %_ctrl_%{%_vkY_%}
-F16 & Z::SendInput, %_ctrl_%{%_vkZ_%}
-F16 & `::SendInput, %_ctrl_%{%_backtick_%}
+F16 & 0::SendInput, %_ctrl_%{%_0_%} ;pressCtrlAnd0
+F16 & 1::SendInput, %_ctrl_%{%_1_%} ;pressCtrlAnd1
+F16 & 2::SendInput, %_ctrl_%{%_2_%} ;pressCtrlAnd2
+F16 & 3::SendInput, %_ctrl_%{%_3_%} ;pressCtrlAnd3
+F16 & +::SendInput, %_ctrl_%{%_plus_%} ;pressCtrlAndPlus
+F16 & -::SendInput, %_ctrl_%{%_minus_%} ;pressCtrlAndMinus
+F16 & C::SendInput, %_ctrl_%{%_virtualKeyC_%} ;pressCtrlAndC
+F16 & I::SendInput, %_ctrl_%{%_virtualKeyI_%} ;pressCtrlAndI
+F16 & J::SendInput, %_ctrl_%{%_virtualKeyJ_%} ;pressCtrlAndJ
+F16 & L::SendInput, %_ctrl_%{%_virtualKeyL_%} ;pressCtrlAndL
+F16 & O::SendInput, %_ctrl_%{%_virtualKeyO_%} ;pressCtrlAndO
+F16 & R::SendInput, %_ctrl_%{%_virtualKeyR_%} ;pressCtrlAndR
+F16 & S::SendInput, %_ctrl_%{%_virtualKeyS_%} ;pressCtrlAndS
+F16 & T::SendInput, %_ctrl_%{%_virtualKeyT_%} ;pressCtrlAndT
+F16 & U::SendInput, %_ctrl_%{%_virtualKeyU_%} ;pressCtrlAndU
+F16 & V::SendInput, %_ctrl_%{%_virtualKeyV_%} ;pressCtrlAndV
+F16 & W::SendInput, %_ctrl_%{%_virtualKeyW_%} ;pressCtrlAndW
+F16 & X::SendInput, %_ctrl_%{%_virtualKeyX_%} ;pressCtrlAndX
+F16 & Y::SendInput, %_ctrl_%{%_virtualKeyY_%} ;pressCtrlAndY
+F16 & Z::SendInput, %_ctrl_%{%_virtualKeyZ_%} ;pressCtrlAndZ
+F16 & `::SendInput, %_ctrl_%{%_backtick_%} ;pressCtrlAndBacktick
