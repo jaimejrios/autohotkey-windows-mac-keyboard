@@ -154,8 +154,8 @@ F16 & '::SendInput, %_ctrl_%{%_virtualKeyN_%} ;openNew
 Alt & Backspace::SendInput, {%_appsKey_%}
 Alt & \::SendInput, %_windows_%{%_virtualKeyB_%} ;toggleTaskbarButtons
 F16 & Enter::SendInput, %_ctrl_%{%_virtualKeyP_%} ;pressCtrlAndP
-Alt & F::SendInput, %_alt_%{%_right_%}
-Alt & B::SendInput, %_alt_%{%_left_%}
+Alt & F::SendInput, %_alt_%{%_right_%} ;moveToNextWebpage
+Alt & B::SendInput, %_alt_%{%_left_%} ;moveToPreviousWebpage
 F16 & \::SendInput, {%_bullet_%} ;insertBulletSymbol
 
 ;CTRL KEY REMAPPINGS
