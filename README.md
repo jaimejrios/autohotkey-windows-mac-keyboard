@@ -50,7 +50,7 @@ Breezily's Shortcut List
   - `Caps Lock + U` - Extend selection upwards
   - `Caps Lock + J` - Extend selection downwards
 
-* **Desktop Navigation Shortcuts**
+* **Mouse Pointer Shortcuts**
   - `Alt & W` - Move the mouse pointer up
   - `Alt & A` - Move the mouse pointer left
   - `Alt & S` - Move the mouse pointer down
