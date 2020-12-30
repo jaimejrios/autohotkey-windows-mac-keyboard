@@ -58,150 +58,154 @@ virt_keyZ=vk5A
 backtick_key=vkC0
 
 ;CURSOR-NAV SHORTCUTS
-F16 & D::SendInput, {%delete_key%}
-F16 & H::SendInput, {%backspace_key%}
-F16 & B::SendInput, {%left_key%}
-F16 & F::SendInput, {%right_key%}
-F16 & P::SendInput, {%up_key%}
-F16 & N::SendInput, {%down_key%}
-Alt & P::SendInput, {%pageup_key%}
-Alt & N::SendInput, {%pagedown_key%}
-F16 & `;::SendInput, %ctrl_key%{%virt_keyA%} ;selectAll
-F16 & A::SendInput, {%home_key%} ;moveToBegOfLine
-F16 & E::SendInput, {%end_key%} ;moveToEndOfLine
-F16 & K::SendInput, %shift_key%{%end_key%}{%delete_key%} ;deleteLine
-Alt & -::SendInput, %shift_key%{%left_key%} ;extendSelectionBackOneChar
-Alt & +::SendInput, %shift_key%{%right_key%} ;extendSelectionForwardOneChar
-Alt & <::SendInput, %ctrl_key%%shift_key%{%left_key%} ;extendSelectionTowardsBegOfLine
-Alt & >::SendInput, %ctrl_key%%shift_key%{%right_key%} ;extendSelectionTowardsEndOfLine
-Alt & }::SendInput, %shift_key%{%home_key%} ;highlightToBegOfLine
-Alt & {::SendInput, %shift_key%{%end_key%} ;highlightToEndOfLine
-F16 & U::SendInput, %shift_key%{%up_key%} ;extendSelectionUpwards
-F16 & J::SendInput, %shift_key%{%down_key%} ;extendSelectionDownwards
+F16 & D::SendInput, {%delete_key%} ;DeleteKey()
+F16 & H::SendInput, {%backspace_key%} ;BackspaceKey()
+F16 & B::SendInput, {%left_key%} ;LeftKey()
+F16 & F::SendInput, {%right_key%} ;RightKey()
+F16 & P::SendInput, {%up_key%} ;UpKey()
+F16 & N::SendInput, {%down_key%} ;DownKey()
+Alt & P::SendInput, {%pageup_key%} ;PageUpKey()
+Alt & N::SendInput, {%pagedown_key%} ;PageDownKey()
+F16 & `;::SendInput, %ctrl_key%{%virt_keyA%} ;Ctrl_A()
+F16 & A::SendInput, {%home_key%} ;HomeKey()
+F16 & E::SendInput, {%end_key%} ;EndKey()
+F16 & K::SendInput, %shift_key%{%end_key%}{%delete_key%} ;ShiftEndDelete()
+Alt & {::SendInput, %shift_key%{%left_key%} ;ShiftLeft()
+Alt & }::SendInput, %shift_key%{%right_key%} ;ShiftRight()
+Alt & <::SendInput, %ctrl_key%%shift_key%{%left_key%} ;CtrlShiftLeft()
+Alt & >::SendInput, %ctrl_key%%shift_key%{%right_key%} ;CtrlShiftRight()
+Alt & -::SendInput, %shift_key%{%home_key%} ;ShiftHome()
+Alt & +::SendInput, %shift_key%{%end_key%} ;ShiftEnd()
+F16 & U::SendInput, %shift_key%{%up_key%} ;ShiftUp()
+F16 & J::SendInput, %shift_key%{%down_key%} ;ShiftDown()
 
 ;MOUSE-POINTER SHORTCUTS
-Alt & W::MoveMousePointerUp()
-Alt & A::MoveMousePointerLeft()
-Alt & S::MoveMousePointerDown()
-Alt & D::MoveMousePointerRight()
+Alt & W::MouseMovePointerUp()
+Alt & A::MouseMovePointerLeft()
+Alt & S::MouseMovePointerDown()
+Alt & D::MouseMovePointerRight()
 Alt & R::MouseClickRightButton()
 Alt & `;::MousePointerCenterClick()
-Alt & C::SendInput, {%left_click%}
+Alt & C::SendInput, {%left_click%} ;MouseClickLeftButton()
 
-ScreenHeight() {
+GetScreenHeight() {
   return A_ScreenHeight
 }
 
-ScreenWidth() {
+GetScreenWidth() {
   return A_ScreenWidth
 }
 
-MouseMoveDistanceFactor() {
-  return 0.03
+;GetMouseMoveDistanceXFactor()
+;GetMouseMoveDistanceYFactor()
+GetMouseMoveDistanceFactor() {
+  return 0.0275
 }
 
-PointerOffsetDistance(size, factor) {
+DivideByTwo(number) {
+  return number / 2
+}
+
+GetPointerOffsetDistance(size, factor) {
   offset_distance := size * factor
   return offset_distance
 }
 
-MoveMousePointerUp() {
+MouseMovePointerUp() {
   MouseGetPos, x_pos, y_pos
-  distance_factor := MouseMoveDistanceFactor()
-  screen_height := ScreenHeight()
-  y_position := y_pos - PointerOffsetDistance(screen_height, distance_factor)
+  distance_factor := GetMouseMoveDistanceFactor()
+  screen_height := GetScreenHeight()
+  y_position := y_pos - GetPointerOffsetDistance(screen_height, distance_factor)
   MouseMove, %x_pos%, %y_position%
   return
 }
 
-; soon-to-be deceprected method
-; MoveMousePointerUp() {
-;   MouseGetPos, xPosition, yPosition
-;   newYPosition := yPosition - 30
-;   MouseMove, %xPosition%, %newYPosition%
-;   return
-; }
-
-MoveMousePointerLeft() {
-  MouseGetPos, xPosition, yPosition
-  newXPosition := xPosition - 30
-  MouseMove, %newXPosition%, %yPosition%
+MouseMovePointerLeft() {
+  MouseGetPos, x_pos, y_pos
+  distance_factor := GetMouseMoveDistanceFactor()
+  screen_width := GetScreenWidth()
+  x_position := x_pos - GetPointerOffsetDistance(screen_width, distance_factor)
+  MouseMove, %x_position%, %y_pos%
   return
 }
 
-MoveMousePointerDown() {
-  MouseGetPos, xPosition, yPosition
-  newYPosition := yPosition + 30
-  MouseMove, %xPosition%, %newYPosition%
+MouseMovePointerDown() {
+  MouseGetPos, x_pos, y_pos
+  distance_factor := GetMouseMoveDistanceFactor()
+  screen_height := GetScreenHeight()
+  y_position := y_pos + GetPointerOffsetDistance(screen_height, distance_factor)
+  MouseMove, %x_pos%, %y_position%
   return
 }
 
-MoveMousePointerRight() {
-  MouseGetPos, xPosition, yPosition
-  newXPosition := xPosition + 30
-  MouseMove, %newXPosition%, %yPosition%
+MouseMovePointerRight() {
+  MouseGetPos, x_pos, y_pos
+  distance_factor := GetMouseMoveDistanceFactor()
+  screen_width := GetScreenWidth()
+  x_position := x_pos + GetPointerOffsetDistance(screen_width, distance_factor)
+  MouseMove, %x_position%, %y_pos%
   return
 }
 
 MousePointerCenterClick() {
-  WinGetPos, X, Y, windowWidth, windowHeight, A
-  widthDividedByTwo := windowWidth / 2
-  heightDividedByTwo := windowHeight / 2
-  Click, %widthDividedByTwo%, %heightDividedByTwo%
+  WinGetPos, X, Y, window_width, window_height, A
+  width_divided_by_two := DivideByTwo(window_width)
+  height_divided_by_two := DivideByTwo(window_height)
+  Click, %width_divided_by_two%, %height_divided_by_two%
   return
 }
 
 MouseClickRightButton() {
-  MouseGetPos, xPosition, yPosition
-  Click, Right, %xPosition%, %yPosition%
+  MouseGetPos, x_pos, y_pos
+  Click, Right, %x_pos%, %y_pos%
   return
 }
 
 ;DESKTOP-NAV SHORTCUTS
-F16 & 4::SendInput, %windows_key%{%tab_key%} ;showTaskView
-F16 & 5::SendInput, %windows_key%%ctrl_key%{%right_key%} ;switchToRightDesktop
-F16 & 7::SendInput, %windows_key%%ctrl_key%{%left_key%} ;switchToLeftDesktop
-F16 & 8::SendInput, %windows_key%%ctrl_key%{%virt_keyD%} ;newDesktop
-F16 & 9::SendInput, %windows_key%%ctrl_key%{%f4_key%} ;closeDesktop
+F16 & 4::SendInput, %windows_key%{%tab_key%} ;SuperTab()
+F16 & 5::SendInput, %windows_key%%ctrl_key%{%right_key%} ;SuperCtrlRight()
+F16 & 7::SendInput, %windows_key%%ctrl_key%{%left_key%} ;SuperCtrlLeft()
+F16 & 8::SendInput, %windows_key%%ctrl_key%{%virt_keyD%} ;SuperCtrlD()
+F16 & 9::SendInput, %windows_key%%ctrl_key%{%f4_key%} ;SuperCtrlF4()
 
 ;WINDOW-NAV SHORTCUTS
-F16 & M::SendInput, %windows_key%{%down_key%} ;minimizeWindows
-F16 & <::SendInput, %windows_key%{%left_key%} ;moveWindowLeft
-F16 & >::SendInput, %windows_key%{%right_key%} ;moveWindowRight
-F16 & /::SendInput, %windows_key%{%up_key%} ;maximizeWindows
+F16 & M::SendInput, %windows_key%{%down_key%} ;SuperDown()
+F16 & <::SendInput, %windows_key%{%left_key%} ;SuperLeft()
+F16 & >::SendInput, %windows_key%{%right_key%} ;SuperRight()
+F16 & /::SendInput, %windows_key%{%up_key%} ;SuperUp()
 
 ;ESSENTIAL SHORTCUTS
-F16 & Q::SendInput, {%escape_key%} ;pressEscapeKey
-F16 & Space::SendInput, {%win_down_cmd%}{%win_up_cmd%} ;pressWindowsKey
-F16 & ]::SendInput, %ctrl_key%{%tab_key%} ;nextView
-F16 & [::SendInput, %ctrl_key%%shift_key%{%tab_key%} ;previousView
-F16 & G::SendInput, %ctrl_key%{%virt_keyF%} ;openFind
-F16 & '::SendInput, %ctrl_key%{%virt_keyN%} ;openNew
-#N::SendInput, {%f2_key%} ;renameSelection
-Alt & Backspace::SendInput, {%apps_key%}
-Alt & \::SendInput, %windows_key%{%virt_keyB%} ;toggleTaskbarButtons
-F16 & Enter::SendInput, %ctrl_key%{%virt_keyP%} ;pressCtrlAndP
-Alt & F::SendInput, %alt_key%{%right_key%} ;moveToNextWebpage
-Alt & B::SendInput, %alt_key%{%left_key%} ;moveToPreviousWebpage
-F16 & \::SendInput, {%bullet_sym%}
+F16 & Q::SendInput, {%escape_key%} ;EscapeKey()
+F16 & Space::SendInput, {%win_down_cmd%}{%win_up_cmd%} ;SuperKey()
+F16 & ]::SendInput, %ctrl_key%{%tab_key%} ;CtrlTab()
+F16 & [::SendInput, %ctrl_key%%shift_key%{%tab_key%} ;CtrlShiftTab()
+F16 & G::SendInput, %ctrl_key%{%virt_keyF%} ;Ctrl_F()
+F16 & '::SendInput, %ctrl_key%{%virt_keyN%} ;Ctrl_N()
+#N::SendInput, {%f2_key%} ;F2Key()
+Alt & Backspace::SendInput, {%apps_key%} ;AppsKey()
+Alt & \::SendInput, %windows_key%{%virt_keyB%} ;Super_B
+F16 & Enter::SendInput, %ctrl_key%{%virt_keyP%} ;Ctrl_P()
+Alt & F::SendInput, %alt_key%{%right_key%} ;Alt_Right()
+Alt & B::SendInput, %alt_key%{%left_key%} ;Alt_Left()
+F16 & \::SendInput, {%bullet_sym%} ;BulletSymbol()
 
 ;CTRL KEY REMAPPINGS
-F16 & 0::SendInput, %ctrl_key%{%0_key%}
-F16 & 1::SendInput, %ctrl_key%{%1_key%}
-F16 & 2::SendInput, %ctrl_key%{%2_key%}
-F16 & 3::SendInput, %ctrl_key%{%3_key%}
-F16 & +::SendInput, %ctrl_key%{%plus_key%}
-F16 & -::SendInput, %ctrl_key%{%minus_key%}
-F16 & C::SendInput, %ctrl_key%{%virt_keyC%}
-F16 & I::SendInput, %ctrl_key%{%virt_keyI%}
-F16 & L::SendInput, %ctrl_key%{%virt_keyL%}
-F16 & O::SendInput, %ctrl_key%{%virt_keyO%}
-F16 & R::SendInput, %ctrl_key%{%virt_keyR%}
-F16 & S::SendInput, %ctrl_key%{%virt_keyS%}
-F16 & T::SendInput, %ctrl_key%{%virt_keyT%}
-F16 & V::SendInput, %ctrl_key%{%virt_keyV%}
-F16 & W::SendInput, %ctrl_key%{%virt_keyW%}
-F16 & X::SendInput, %ctrl_key%{%virt_keyX%}
-F16 & Y::SendInput, %ctrl_key%{%virt_keyY%}
-F16 & Z::SendInput, %ctrl_key%{%virt_keyZ%}
-F16 & `::SendInput, %ctrl_key%{%backtick_key%}
+F16 & 0::SendInput, %ctrl_key%{%0_key%} ;Ctrl_0()
+F16 & 1::SendInput, %ctrl_key%{%1_key%} ;Ctrl_1()
+F16 & 2::SendInput, %ctrl_key%{%2_key%} ;Ctrl_2()
+F16 & 3::SendInput, %ctrl_key%{%3_key%} ;Ctrl_3()
+F16 & +::SendInput, %ctrl_key%{%plus_key%} ;CtrlPlus()
+F16 & -::SendInput, %ctrl_key%{%minus_key%} ;CtrlMinus()
+F16 & C::SendInput, %ctrl_key%{%virt_keyC%} ;Ctrl_C()
+F16 & I::SendInput, %ctrl_key%{%virt_keyI%} ;Ctrl_I()
+F16 & L::SendInput, %ctrl_key%{%virt_keyL%} ;Ctrl_L()
+F16 & O::SendInput, %ctrl_key%{%virt_keyO%} ;Ctrl_O()
+F16 & R::SendInput, %ctrl_key%{%virt_keyR%} ;Ctrl_R()
+F16 & S::SendInput, %ctrl_key%{%virt_keyS%} ;Ctrl_S()
+F16 & T::SendInput, %ctrl_key%{%virt_keyT%} ;Ctrl_T()
+F16 & V::SendInput, %ctrl_key%{%virt_keyV%} ;Ctrl_V()
+F16 & W::SendInput, %ctrl_key%{%virt_keyW%} ;Ctrl_W()
+F16 & X::SendInput, %ctrl_key%{%virt_keyX%} ;Ctrl_X()
+F16 & Y::SendInput, %ctrl_key%{%virt_keyY%} ;Ctrl_Y()
+F16 & Z::SendInput, %ctrl_key%{%virt_keyZ%} ;Ctrl_Z()
+F16 & `::SendInput, %ctrl_key%{%backtick_key%} ;CtrlBacktick()
