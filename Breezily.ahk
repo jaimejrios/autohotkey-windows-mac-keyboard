@@ -13,6 +13,7 @@ _0_=0
 _1_=1
 _2_=2
 _3_=3
+_appsKey_=AppsKey
 _bullet_=U+2022
 _backspace_=backspace
 _delete_=delete
@@ -24,7 +25,7 @@ _f4_=f4
 _home_=home
 _left_=left
 _leftClick_=LButton
-_rightClick_=AppsKey
+_rightClick_=RButton
 _minus_=NumpadSub
 _pageup_=PgUp
 _plus_=NumpadAdd
@@ -66,28 +67,74 @@ F16 & N::SendInput, {%_down_%} ;pressDownKey
 Alt & P::SendInput, {%_pageup_%} ;pressPgUpKey
 Alt & N::SendInput, {%_pagedown_%} ;pressPgDnKey
 F16 & `;::SendInput, %_ctrl_%{%_virtualKeyA_%} ;selectAll
-Alt & `;:: ;centerCursorClick
-  WinGetPos, X, Y, WindowWidth, WindowHeight, A
-  _widthDividedByTwo_ := WindowWidth / 2
-  _heightDividedByTwo_ := WindowHeight / 2
-  Send, {Click, %_widthDividedByTwo_%, %_heightDividedByTwo_%}
-  return
-
 F16 & A::SendInput, {%_home_%} ;moveToBegOfLine
 F16 & E::SendInput, {%_end_%} ;moveToEndOfLine
 F16 & K::SendInput, %_shift_%{%_end_%}{%_delete_%} ;deleteLine
-Alt & <::SendInput, %_ctrl_%%_shift_%{%_left_%} ;extendToBegOfLine
-Alt & >::SendInput, %_ctrl_%%_shift_%{%_right_%} ;extendToEndOfLine
-Alt & {::SendInput, %_shift_%{%_home_%} ;highlightToBegOfLine
-Alt & }::SendInput, %_shift_%{%_end_%} ;highlightToEndOfLine
+Alt & -::SendInput, %_shift_%{%_left_%} ;extendSelectionBackOneChar
+Alt & +::SendInput, %_shift_%{%_right_%} ;extendSelectionForwardOneChar
+Alt & <::SendInput, %_ctrl_%%_shift_%{%_left_%} ;extendSelectionTowardsBegOfLine
+Alt & >::SendInput, %_ctrl_%%_shift_%{%_right_%} ;extendSelectionTowardsEndOfLine
+Alt & }::SendInput, %_shift_%{%_home_%} ;highlightToBegOfLine
+Alt & {::SendInput, %_shift_%{%_end_%} ;highlightToEndOfLine
 F16 & U::SendInput, %_shift_%{%_up_%} ;extendSelectionUpwards
 F16 & J::SendInput, %_shift_%{%_down_%} ;extendSelectionDownwards
+
+;MOUSE-POINTER SHORTCUTS
+Alt & W::MoveMousePointerUp30px()
+Alt & A::MoveMousePointerLeft30px()
+Alt & S::MoveMousePointerDown30px()
+Alt & D::MoveMousePointerRight30px()
+Alt & R::MouseClickRightButton()
+Alt & `;::MousePointerCenterClick()
+Alt & C::SendInput, {%_leftClick_%}
+
+MoveMousePointerUp30px() {
+  MouseGetPos, _xPosition_, _yPosition_
+  _newYPosition_ := _yPosition_ - 30
+  MouseMove, %_xPosition_%, %_newYPosition_%
+  return
+}
+
+MoveMousePointerLeft30px() {
+  MouseGetPos, _xPosition_, _yPosition_
+  _newXPosition_ := _xPosition_ - 30
+  MouseMove, %_newXPosition_%, %_yPosition_%
+  return
+}
+
+MoveMousePointerDown30px() {
+  MouseGetPos, _xPosition_, _yPosition_
+  _newYPosition_ := _yPosition_ + 30
+  MouseMove, %_xPosition_%, %_newYPosition_%
+  return
+}
+
+MoveMousePointerRight30px() {
+  MouseGetPos, _xPosition_, _yPosition_
+  _newXPosition_ := _xPosition_ + 30
+  MouseMove, %_newXPosition_%, %_yPosition_%
+  return
+}
+
+MousePointerCenterClick() {
+  WinGetPos, X, Y, _windowWidth_, _windowHeight_, A
+  _widthDividedByTwo_ := _windowWidth_ / 2
+  _heightDividedByTwo_ := _windowHeight_ / 2
+  Click, %_widthDividedByTwo_%, %_heightDividedByTwo_%
+  return
+}
+
+MouseClickRightButton() {
+  MouseGetPos, _xPosition_, _yPosition_
+  Click, Right, %_xPosition_%, %_yPosition_%
+  return
+}
 
 ;DESKTOP-NAV SHORTCUTS
 F16 & 4::SendInput, %_windows_%{%_tab_%} ;showTaskView
 F16 & 5::SendInput, %_windows_%%_ctrl_%{%_right_%} ;switchToRightDesktop
 F16 & 7::SendInput, %_windows_%%_ctrl_%{%_left_%} ;switchToLeftDesktop
-F16 & 8::Send, %_windows_%%_ctrl_%{%_virtualKeyD_%} ;newDesktop
+F16 & 8::SendInput, %_windows_%%_ctrl_%{%_virtualKeyD_%} ;newDesktop
 F16 & 9::SendInput, %_windows_%%_ctrl_%{%_f4_%} ;closeDesktop
 
 ;WINDOW-NAV SHORTCUTS
@@ -99,14 +146,16 @@ F16 & /::SendInput, %_windows_%{%_up_%} ;maximizeWindows
 ;ESSENTIAL SHORTCUTS
 F16 & Q::SendInput, {%_escape_%} ;pressEscapeKey
 F16 & Space::SendInput, {%_winDown_%}{%_winUp_%} ;pressWindowsKey
-F16 & ]::Send, %_ctrl_%{%_tab_%} ;nextView
-F16 & [::Send, %_ctrl_%%_shift_%{%_tab_%} ;previousView
+F16 & ]::SendInput, %_ctrl_%{%_tab_%} ;nextView
+F16 & [::SendInput, %_ctrl_%%_shift_%{%_tab_%} ;previousView
 F16 & G::SendInput, %_ctrl_%{%_virtualKeyF_%} ;openFind
 F16 & '::SendInput, %_ctrl_%{%_virtualKeyN_%} ;openNew
 #N::SendInput, {%_f2_%} ;renameSelection
-Alt & Backspace::Send, {%_rightClick_%} ;rightMouseClick
+Alt & Backspace::SendInput, {%_appsKey_%}
 Alt & \::SendInput, %_windows_%{%_virtualKeyB_%} ;toggleTaskbarButtons
 F16 & Enter::SendInput, %_ctrl_%{%_virtualKeyP_%} ;pressCtrlAndP
+Alt & F::SendInput, %_alt_%{%_right_%}
+Alt & B::SendInput, %_alt_%{%_left_%}
 F16 & \::SendInput, {%_bullet_%} ;insertBulletSymbol
 
 ;CTRL KEY REMAPPINGS
