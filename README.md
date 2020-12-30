@@ -1,4 +1,5 @@
 
+
 Breezily for Windows 10
 ---
 
@@ -40,12 +41,22 @@ Breezily's Shortcut List
   - `Caps Lock + A` - Move to beginning of line
   - `Caps Lock + E` - Move to end of line
   - `Caps Lock + K` - Delete line
+  - `Alt & -` - Extend selection backward one character
+  - `Alt & +` - Extend selection forward one character
   - `Alt + <` - Extend selection towards beginning of line
   - `Alt + >` - Extend selection towards end of line
   - `Alt + {` - Highlight selection to beginning of line
   - `Alt + }` - Highlight selection to end of line
   - `Caps Lock + U` - Extend selection upwards
   - `Caps Lock + J` - Extend selection downwards
+
+* **Desktop Navigation Shortcuts**
+  - `Alt & W` - Move the mouse pointer up
+  - `Alt & A` - Move the mouse pointer left
+  - `Alt & S` - Move the mouse pointer down
+  - `Alt & D` - Move the mouse pointer right
+  - `Alt & R` - Click the right mouse button
+  - `Alt & C` - Click the left mouse button
 
 * **Desktop Navigation Shortcuts**
   - `Caps Lock + 4` - Show task view panel
@@ -68,9 +79,11 @@ Breezily's Shortcut List
   - `Caps Lock + G` - Open Find
   - `Caps Lock + '` - Open New
   - `Window + N` - Rename Selection
-  - `Alt + Backspace` - Right Click
+  - `Alt + Backspace` - Apps Key
   - `Alt + \` - Toggle taskbar buttons
-  - `Caps Lock & Enter` - Ctrl + P
+  - `Caps Lock + Enter` - Ctrl + P
+  - `Alt + B` - Move back to the previous webpage
+  - `Alt + F` - Move forward to the next webpage
   - `Caps Lock + \` - Insert bullet symbol
 
 * **Ctrl Key Remappings**
