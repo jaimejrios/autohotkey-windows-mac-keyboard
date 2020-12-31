@@ -35,28 +35,28 @@ Breezily's Shortcut List
   - `Caps Lock + N` - Down
   - `Alt + P` - PageUp
   - `Alt + N` - PageDown
-  - `Caps Lock + ;` - Select All
-  - `Alt + ;` - Deselect All (center cursor click on current window)
-  - `Windows + N` - Rename
-  - `Caps Lock + A` - Move to beginning of line
-  - `Caps Lock + E` - Move to end of line
-  - `Caps Lock + K` - Delete line
-  - `Alt & -` - Extend selection backward one character
-  - `Alt & +` - Extend selection forward one character
-  - `Alt + <` - Extend selection towards beginning of line
-  - `Alt + >` - Extend selection towards end of line
-  - `Alt + {` - Highlight selection to beginning of line
-  - `Alt + }` - Highlight selection to end of line
-  - `Caps Lock + U` - Extend selection upwards
-  - `Caps Lock + J` - Extend selection downwards
+  - `Caps Lock + ;` - Ctrl + A (select all)
+  - `Caps Lock + A` - Home key (move to beginning of line)
+  - `Caps Lock + E` - End key (move to end of line)
+  - `Caps Lock + K` - Shift + End + Delete (delete line)
+  - `Alt + <` - Shift + Left (extend selection backward one character)
+  - `Alt + >` - Shift + Right (extend selection forward one character)
+  - `Alt + {` - Ctrl + Shift + Left (extend selection towards beginning of line)
+  - `Alt + }` - Ctrl + Shift + Right (extend selection towards end of line)
+  - `Alt + -` - Shift + Home (highlight selection to beginning of line)
+  - `Alt + +` - Shift + End (highlight selection to end of line)
+  - `Caps Lock + U` - Shift + Up (extend selection upwards)
+  - `Caps Lock + J` - Shift + Down (extend selection downwards)
 
 * **Mouse Pointer Shortcuts**
   - `Alt & W` - Move the mouse pointer up
   - `Alt & A` - Move the mouse pointer left
   - `Alt & S` - Move the mouse pointer down
   - `Alt & D` - Move the mouse pointer right
-  - `Alt & R` - Click the right mouse button
   - `Alt & C` - Click the left mouse button
+  - `Alt + X` - Click the left mouse button (alternative)
+  - `Alt & R` - Click the right mouse button
+  - `Alt & ` - Center cursor and left click
 
 * **Desktop Navigation Shortcuts**
   - `Caps Lock + 4` - Show task view panel
@@ -73,18 +73,19 @@ Breezily's Shortcut List
 
 * **Breezily Essential Shortcuts**
   - `Caps Lock + Q` - Escape
-  - `Caps Lock + Space` - Start Menu
-  - `Caps Lock + ]` - Next View
-  - `Caps Lock + [` - Previous View
-  - `Caps Lock + G` - Open Find
-  - `Caps Lock + '` - Open New
-  - `Window + N` - Rename Selection
-  - `Alt + Backspace` - Apps Key
-  - `Alt + \` - Toggle taskbar buttons
-  - `Caps Lock + Enter` - Ctrl + P
-  - `Alt + B` - Move back to the previous webpage
-  - `Alt + F` - Move forward to the next webpage
-  - `Caps Lock + \` - Insert bullet symbol
+  - `Caps Lock + Space` - Windows key
+  - `Caps Lock + G` - Ctrl + F (Find)
+  - `Caps Lock + Enter` - Ctrl + P (Print)
+  - `Caps Lock + I` - Ctrl + X (Cut)
+  - `Caps Lock + '` - Ctrl + N (Open New)
+  - `Caps Lock + ]` - Ctrl + Tab (Next View)
+  - `Caps Lock + [` - Ctrl + Shift + Tab (Previous View)
+  - `Window + N` - F2 key (Rename selection)
+  - `Alt + Backspace` - Apps key
+  - `Alt + /` - Windows + B (toggle taskbar buttons)
+  - `Alt + F` - Alt + Right (move forward to the next webpage)
+  - `Alt + B` - Alt + Left (move back to the previous webpage)
+  - `Caps Lock + \` - Insert unicode bullet symbol
 
 * **Ctrl Key Remappings**
   - `Caps Lock + 0` - Ctrl+0
@@ -94,7 +95,6 @@ Breezily's Shortcut List
   - `Caps Lock + +` - Ctrl and +
   - `Caps Lock + -` - Ctrl and -
   - `Caps Lock + C` - Ctrl+C
-  - `Caps Lock + I` - Ctrl+I
   - `Caps Lock + L` - Ctrl+L
   - `Caps Lock + O` - Ctrl+O
   - `Caps Lock + R` - Ctrl+R
