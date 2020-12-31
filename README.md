@@ -38,8 +38,8 @@ Breezily's Shortcut List
   - `Caps Lock + A` - Home key (move to beginning of line)
   - `Caps Lock + E` - End key (move to end of line)
   - `Caps Lock + K` - Shift+End+Delete (delete line)
-  - `Alt + <` - Shift+Left (extend selection backward one character)
-  - `Alt + >` - Shift+Right (extend selection forward one character)
+  - `Alt + ;` - Shift+Left (extend selection backward one character)
+  - `Alt + '` - Shift+Right (extend selection forward one character)
   - `Alt + {` - Ctrl+Shift+Left (extend selection towards beginning of line)
   - `Alt + }` - Ctrl+Shift+Right (extend selection towards end of line)
   - `Alt + -` - Shift+Home (highlight selection to beginning of line)
@@ -59,8 +59,8 @@ Breezily's Shortcut List
   - `Alt & 2` - Move pointer to upper right of screen
   - `Alt & 3` - Move pointer to bottom left of screen
   - `Alt & 4` - Move pointer to bottom right of screen
-  - `Alt & Enter` - Move pointer to center of active window
-  - `Alt & ;` - Center cursor and left click
+  - `Alt & 5` - Move pointer to center of active window
+  - `Alt & Backspace` - Center cursor and left click
 
 * **Desktop Navigation Shortcuts**
   - `Caps Lock + 4` - Show task view panel

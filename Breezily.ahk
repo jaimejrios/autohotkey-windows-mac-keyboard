@@ -66,12 +66,12 @@ F16 & P::Keypress(up_key)
 F16 & N::Keypress(down_key)
 Alt & P::Keypress(pageup_key)
 Alt & N::Keypress(pagedown_key)
-F16 & `;::KeypressX2_1(ctrl_key, A_key) ;SelectAll
+Alt & H::KeypressX2_1(ctrl_key, A_key) ;SelectAll
 F16 & A::Keypress(home_key) ;MoveCursorToBegOfLine
 F16 & E::Keypress(end_key) ;MoveCursorToEndOfLine
 F16 & K::KeypressX3_2(shift_key, end_key, delete_key) ;DeleteLine
-Alt & <::KeypressX2_1(shift_key, left_key) ;ExtendSelectionBackwardOneChar
-Alt & >::KeypressX2_1(shift_key, right_key) ;ExtendSelectionForwardOneChar
+Alt & `;::KeypressX2_1(shift_key, left_key) ;ExtendSelectionBackwardOneChar
+Alt & '::KeypressX2_1(shift_key, right_key) ;ExtendSelectionForwardOneChar
 Alt & {::KeypressX3_1(ctrl_key, shift_key, left_key) ;ExtendSelectionTowardsEndOfLine
 Alt & }::KeypressX3_1(ctrl_key, shift_key, right_key) ;ExtendSelectionTowardsBegOfLine
 Alt & -::KeypressX2_1(shift_key, home_key) ;ExtendSelectionToBegOfLine
@@ -91,8 +91,8 @@ Alt & 1::MouseMovePointerUpperLeft()
 Alt & 2::MouseMovePointerUpperRight()
 Alt & 3::MouseMovePointerBottomLeft()
 Alt & 4::MouseMovePointerBottomRight()
-Alt & Enter::MouseMovePointerWindowCenter()
-Alt & `;::MousePointerWindowCenterClick()
+Alt & 5::MouseMovePointerWindowCenter()
+Alt & Backspace::MousePointerWindowCenterClick()
 
 ;DESKTOP-NAV SHORTCUTS
 F16 & 4::KeypressX2_1(windows_key, tab_key) ;ShowTaskViewPanel
@@ -122,6 +122,7 @@ Alt & /::KeypressX2_1(windows_key, B_key) ;TaskbarButtonsFocus
 Alt & F::KeypressX2_1(alt_key, right_key) ;NextWebpage
 Alt & B::KeypressX2_1(alt_key, left_key) ;PreviousWebpage
 Alt & 8::Keypress(bullet_symbol) ;InsertBullet
+
 
 ;CTRL KEY REMAPPINGS
 F16 & 0::KeypressX2_1(ctrl_key, 0_key)
