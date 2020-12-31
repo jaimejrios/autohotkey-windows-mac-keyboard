@@ -87,8 +87,8 @@ Alt & W::MouseMovePointerUp()
 Alt & A::MouseMovePointerLeft()
 Alt & S::MouseMovePointerDown()
 Alt & D::MouseMovePointerRight()
-Alt & 1::MouseMovePointerTopLeft()
-Alt & 2::MouseMovePointerTopRight()
+Alt & 1::MouseMovePointerUpperLeft()
+Alt & 2::MouseMovePointerUpperRight()
 Alt & 3::MouseMovePointerBottomLeft()
 Alt & 4::MouseMovePointerBottomRight()
 Alt & Enter::MouseMovePointerWindowCenter()
@@ -249,7 +249,7 @@ MouseMovePointerRight() {
 ; DivideByFour on both x and y
 ; use A_PriorHotkey to figure out if a left, right, down, or left key was pressed
 
-MouseMovePointerTopLeft() {
+MouseMovePointerUpperLeft() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
@@ -259,7 +259,7 @@ MouseMovePointerTopLeft() {
   return
 }
 
-MouseMovePointerTopRight() {
+MouseMovePointerUpperRight() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()

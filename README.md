@@ -48,13 +48,18 @@ Breezily's Shortcut List
   - `Caps Lock + J` - Shift+Down (extend selection downwards)
 
 * **Mouse Pointer Shortcuts**
+  - `Alt & C` - Click left mouse button
+  - `Alt & X` - Alternative left mouse button click
+  - `Alt & R` - Click the right mouse button
   - `Alt & W` - Move the mouse pointer up
   - `Alt & A` - Move the mouse pointer left
   - `Alt & S` - Move the mouse pointer down
   - `Alt & D` - Move the mouse pointer right
-  - `Alt & C` - Click the left mouse button
-  - `Alt + X` - Click the left mouse button (alternative)
-  - `Alt & R` - Click the right mouse button
+  - `Alt & 1` - Move pointer to upper left of screen
+  - `Alt & 2` - Move pointer to upper right of screen
+  - `Alt & 3` - Move pointer to bottom left of screen
+  - `Alt & 4` - Move pointer to bottom right of screen
+  - `Alt & Enter` - Move pointer to center of active window
   - `Alt & ` - Center cursor and left click
 
 * **Desktop Navigation Shortcuts**
@@ -78,7 +83,7 @@ Breezily's Shortcut List
   - `Caps Lock + I` - Ctrl+X (Cut)
   - `Caps Lock + '` - Ctrl+N (Open New)
   - `Caps Lock + ]` - Ctrl+Tab (Next View)
-  - `Caps Lock + [` - Ctrl+Shift + Tab (Previous View)
+  - `Caps Lock + [` - Ctrl+Shift+Tab (Previous View)
   - `Window + N` - F2 key (Rename selection)
   - `Alt + Backspace` - Apps key
   - `Alt + /` - Windows+B (toggle taskbar buttons)
