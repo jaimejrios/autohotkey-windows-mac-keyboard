@@ -1,5 +1,4 @@
 
-
 Breezily for Windows 10
 ---
 
@@ -35,18 +34,18 @@ Breezily's Shortcut List
   - `Caps Lock + N` - Down
   - `Alt + P` - PageUp
   - `Alt + N` - PageDown
-  - `Caps Lock + ;` - Ctrl + A (select all)
+  - `Caps Lock + ;` - Ctrl+A (select all)
   - `Caps Lock + A` - Home key (move to beginning of line)
   - `Caps Lock + E` - End key (move to end of line)
-  - `Caps Lock + K` - Shift + End + Delete (delete line)
-  - `Alt + <` - Shift + Left (extend selection backward one character)
-  - `Alt + >` - Shift + Right (extend selection forward one character)
-  - `Alt + {` - Ctrl + Shift + Left (extend selection towards beginning of line)
-  - `Alt + }` - Ctrl + Shift + Right (extend selection towards end of line)
-  - `Alt + -` - Shift + Home (highlight selection to beginning of line)
-  - `Alt + +` - Shift + End (highlight selection to end of line)
-  - `Caps Lock + U` - Shift + Up (extend selection upwards)
-  - `Caps Lock + J` - Shift + Down (extend selection downwards)
+  - `Caps Lock + K` - Shift+End+Delete (delete line)
+  - `Alt + <` - Shift+Left (extend selection backward one character)
+  - `Alt + >` - Shift+Right (extend selection forward one character)
+  - `Alt + {` - Ctrl+Shift+Left (extend selection towards beginning of line)
+  - `Alt + }` - Ctrl+Shift+Right (extend selection towards end of line)
+  - `Alt + -` - Shift+Home (highlight selection to beginning of line)
+  - `Alt + +` - Shift+End (highlight selection to end of line)
+  - `Caps Lock + U` - Shift+Up (extend selection upwards)
+  - `Caps Lock + J` - Shift+Down (extend selection downwards)
 
 * **Mouse Pointer Shortcuts**
   - `Alt & W` - Move the mouse pointer up
@@ -74,17 +73,17 @@ Breezily's Shortcut List
 * **Breezily Essential Shortcuts**
   - `Caps Lock + Q` - Escape
   - `Caps Lock + Space` - Windows key
-  - `Caps Lock + G` - Ctrl + F (Find)
-  - `Caps Lock + Enter` - Ctrl + P (Print)
-  - `Caps Lock + I` - Ctrl + X (Cut)
-  - `Caps Lock + '` - Ctrl + N (Open New)
-  - `Caps Lock + ]` - Ctrl + Tab (Next View)
-  - `Caps Lock + [` - Ctrl + Shift + Tab (Previous View)
+  - `Caps Lock + G` - Ctrl+F (Find)
+  - `Caps Lock + Enter` - Ctrl+P (Print)
+  - `Caps Lock + I` - Ctrl+X (Cut)
+  - `Caps Lock + '` - Ctrl+N (Open New)
+  - `Caps Lock + ]` - Ctrl+Tab (Next View)
+  - `Caps Lock + [` - Ctrl+Shift + Tab (Previous View)
   - `Window + N` - F2 key (Rename selection)
   - `Alt + Backspace` - Apps key
-  - `Alt + /` - Windows + B (toggle taskbar buttons)
-  - `Alt + F` - Alt + Right (move forward to the next webpage)
-  - `Alt + B` - Alt + Left (move back to the previous webpage)
+  - `Alt + /` - Windows+B (toggle taskbar buttons)
+  - `Alt + F` - Alt+Right (move forward to the next webpage)
+  - `Alt + B` - Alt+Left (move back to the previous webpage)
   - `Caps Lock + \` - Insert unicode bullet symbol
 
 * **Ctrl Key Remappings**
