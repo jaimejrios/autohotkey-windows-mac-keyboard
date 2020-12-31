@@ -79,21 +79,6 @@ Alt & +::KeypressX2_1(shift_key, end_key) ;ExtendSelectionToEndOfLine
 F16 & U::KeypressX2_1(shift_key, up_key) ;ExtendSelectionUpwards
 F16 & J::KeypressX2_1(shift_key, down_key) ;ExtendSelectionDownwards
 
-;MOUSE-POINTER SHORTCUTS
-Alt & C::Keypress(left_mouse_btn)
-Alt & X::MouseClickLeftButton()
-Alt & R::MouseClickRightButton()
-Alt & W::MouseMovePointerUp()
-Alt & A::MouseMovePointerLeft()
-Alt & S::MouseMovePointerDown()
-Alt & D::MouseMovePointerRight()
-Alt & 1::MouseMovePointerUpperLeft()
-Alt & 2::MouseMovePointerUpperRight()
-Alt & 3::MouseMovePointerBottomLeft()
-Alt & 4::MouseMovePointerBottomRight()
-Alt & 5::MouseMovePointerWindowCenter()
-Alt & Backspace::MousePointerWindowCenterClick()
-
 ;DESKTOP-NAV SHORTCUTS
 F16 & 4::KeypressX2_1(windows_key, tab_key) ;ShowTaskViewPanel
 F16 & 5::KeypressX3_1(windows_key, ctrl_key, right_key) ;SwitchToRightVirtualDesktop
@@ -121,8 +106,7 @@ Alt & \::Keypress(apps_key) ;RightClickAlternative
 Alt & /::KeypressX2_1(windows_key, B_key) ;TaskbarButtonsFocus
 Alt & F::KeypressX2_1(alt_key, right_key) ;NextWebpage
 Alt & B::KeypressX2_1(alt_key, left_key) ;PreviousWebpage
-Alt & 8::Keypress(bullet_symbol) ;InsertBullet
-
+Alt & 0::Keypress(bullet_symbol) ;InsertBullet
 
 ;CTRL KEY REMAPPINGS
 F16 & 0::KeypressX2_1(ctrl_key, 0_key)
@@ -141,6 +125,26 @@ F16 & V::KeypressX2_1(ctrl_key, V_key)
 F16 & W::KeypressX2_1(ctrl_key, W_key)
 F16 & Y::KeypressX2_1(ctrl_key, Y_key)
 F16 & Z::KeypressX2_1(ctrl_key, Z_key)
+
+;MOUSE-POINTER SHORTCUTS
+Alt & C::Keypress(left_mouse_btn)
+Alt & X::MouseClickLeftButton()
+Alt & R::MouseClickRightButton()
+Alt & W::MouseMovePointerUp()
+Alt & A::MouseMovePointerLeft()
+Alt & S::MouseMovePointerDown()
+Alt & D::MouseMovePointerRight()
+
+Alt & 1::MouseMovePointerTopLeft()
+Alt & 2::MouseMovePointerTopCenter()
+Alt & 3::MouseMovePointerTopRight()
+Alt & 4::MouseMovePointerMidLeft()
+Alt & 5::MouseMovePointerMidCenter()
+Alt & 6::MouseMovePointerMidRight()
+Alt & 7::MouseMovePointerBotLeft()
+Alt & 8::MouseMovePointerBotCenter()
+Alt & 9::MouseMovePointerBotRight()
+Alt & Backspace::MousePointerWindowCenterClick()
 
 GetScreenHeight() {
   return A_ScreenHeight
@@ -178,15 +182,21 @@ DivideByFour(number) {
   return number / 4
 }
 
+DivideBySix(number) {
+  return number / 6
+}
+
 TimesThreeQuarters(number) {
   return (number * (3/4))
 }
 
+TimesFiveSixths(number) {
+  return (number * (5/6))
+}
+
 GetMouseMoveDistanceFactor() {
   return 0.0275
-} ;future methods...
-;GetMouseMoveDistanceXFactor()
-;GetMouseMoveDistanceYFactor()
+}
 
 MouseClickLeftButton() {
   MouseGetPos, x_pos, y_pos
@@ -232,10 +242,6 @@ MouseMovePointerDown() {
   return
 }
 
-;GetNewYPos(x_pos)
-;GetNewXPosition will find screen_width and distance_factor for you (you only need to pass one argument into function)
-; use A_PriorHotkey to figure out if a left, right, down, or left key was pressed
-
 MouseMovePointerRight() {
   MouseGetPos, x_pos, y_pos
   distance_factor := GetMouseMoveDistanceFactor()
@@ -245,52 +251,48 @@ MouseMovePointerRight() {
   return
 }
 
-; CalcTopLeftXCoords
-; GetScreenDimensions (return screen object with acccessible width and height properties)
-; DivideByFour on both x and y
-; use A_PriorHotkey to figure out if a left, right, down, or left key was pressed
 
-MouseMovePointerUpperLeft() {
+MouseMovePointerTopLeft() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
-  x_position := DivideByFour(screen_width)
+  x_position := DivideBySix(screen_width)
   y_position := DivideByFour(screen_height)
   MouseMove, %x_position%, %y_position%
   return
 }
 
-MouseMovePointerUpperRight() {
+MouseMovePointerTopCenter() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
-  x_position := TimesThreeQuarters(screen_width)
+  x_position := DivideByTwo(screen_width)
   y_position := DivideByFour(screen_height)
   MouseMove, %x_position%, %y_position%
   return
 }
 
-MouseMovePointerBottomLeft() {
+MouseMovePointerTopRight() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
-  x_position := DivideByFour(screen_width)
-  y_position := TimesThreeQuarters(screen_height)
+  x_position := TimesFiveSixths(screen_width)
+  y_position := DivideByFour(screen_height)
   MouseMove, %x_position%, %y_position%
   return
 }
 
-MouseMovePointerBottomRight() {
+MouseMovePointerMidLeft() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
-  x_position := TimesThreeQuarters(screen_width)
-  y_position := TimesThreeQuarters(screen_height)
+  x_position := DivideBySix(screen_width)
+  y_position := DivideByTwo(screen_height)
   MouseMove, %x_position%, %y_position%
   return
 }
 
-MouseMovePointerCenter() {
+MouseMovePointerMidCenter() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
@@ -300,12 +302,42 @@ MouseMovePointerCenter() {
   return
 }
 
-MouseMovePointerWindowCenter() {
+MouseMovePointerMidRight() {
+  CoordMode, Mouse, Screen
+  screen_width := GetScreenWidth()
+  screen_height := GetScreenHeight()
+  x_position := TimesFiveSixths(screen_width)
+  y_position := DivideByTwo(screen_height)
+  MouseMove, %x_position%, %y_position%
+  return
+}
+
+MouseMovePointerBotLeft() {
+  CoordMode, Mouse, Screen
+  screen_width := GetScreenWidth()
+  screen_height := GetScreenHeight()
+  x_position := DivideBySix(screen_width)
+  y_position := TimesThreeQuarters(screen_height)
+  MouseMove, %x_position%, %y_position%
+  return
+}
+
+MouseMovePointerBotCenter() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
   x_position := DivideByTwo(screen_width)
-  y_position := DivideByTwo(screen_height)
+  y_position := TimesThreeQuarters(screen_height)
+  MouseMove, %x_position%, %y_position%
+  return
+}
+
+MouseMovePointerBotRight() {
+  CoordMode, Mouse, Screen
+  screen_width := GetScreenWidth()
+  screen_height := GetScreenHeight()
+  x_position := TimesFiveSixths(screen_width)
+  y_position := TimesThreeQuarters(screen_height)
   MouseMove, %x_position%, %y_position%
   return
 }
