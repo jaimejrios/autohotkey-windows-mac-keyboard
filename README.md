@@ -60,7 +60,7 @@ Breezily's Shortcut List
   - `Alt & 3` - Move pointer to bottom left of screen
   - `Alt & 4` - Move pointer to bottom right of screen
   - `Alt & Enter` - Move pointer to center of active window
-  - `Alt & Backtick` - Center cursor and left click
+  - `Alt & ;` - Center cursor and left click
 
 * **Desktop Navigation Shortcuts**
   - `Caps Lock + 4` - Show task view panel
@@ -79,7 +79,7 @@ Breezily's Shortcut List
   - `Caps Lock + Q` - Escape
   - `Caps Lock + Space` - Windows key
   - `Caps Lock + G` - Ctrl+F (Find)
-  - `Caps Lock + Enter` - Ctrl+P (Print)
+  - `Caps Lock + Backtick` - Ctrl+P (Print)
   - `Caps Lock + I` - Ctrl+X (Cut)
   - `Caps Lock + '` - Ctrl+N (Open New)
   - `Caps Lock + ]` - Ctrl+Tab (Next View)
