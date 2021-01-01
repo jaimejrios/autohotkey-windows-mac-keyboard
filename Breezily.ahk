@@ -19,6 +19,7 @@ backspace_key=backspace
 delete_key=delete
 down_key=down
 end_key=end
+enter_key=enter
 escape_key=escape
 f2_key=f2
 f4_key=f4
@@ -102,11 +103,12 @@ F16 & '::KeypressX2_1(ctrl_key, N_key) ;OpenNew
 F16 & ]::KeypressX2_1(ctrl_key, tab_key) ;NextView
 F16 & [::KeypressX3_1(ctrl_key, shift_key, tab_key) ;PreviousView
 #N::Keypress(f2_key) ;RenameSelection
+F16 & Enter::KeypressX2_1(ctrl_key, enter_key)
 Alt & \::Keypress(apps_key) ;RightClickAlternative
 Alt & /::KeypressX2_1(windows_key, B_key) ;TaskbarButtonsFocus
 Alt & F::KeypressX2_1(alt_key, right_key) ;NextWebpage
 Alt & B::KeypressX2_1(alt_key, left_key) ;PreviousWebpage
-Alt & 0::Keypress(bullet_symbol) ;InsertBullet
+LWin & 8::Keypress(bullet_symbol) ;InsertBullet
 
 ;CTRL KEY REMAPPINGS
 F16 & 0::KeypressX2_1(ctrl_key, 0_key)
@@ -127,6 +129,7 @@ F16 & Y::KeypressX2_1(ctrl_key, Y_key)
 F16 & Z::KeypressX2_1(ctrl_key, Z_key)
 
 ;MOUSE-POINTER SHORTCUTS
+Alt & O::Keypress(left_mouse_btn)
 Alt & C::Keypress(left_mouse_btn)
 Alt & X::MouseClickLeftButton()
 Alt & R::MouseClickRightButton()
@@ -134,7 +137,6 @@ Alt & W::MouseMovePointerUp()
 Alt & A::MouseMovePointerLeft()
 Alt & S::MouseMovePointerDown()
 Alt & D::MouseMovePointerRight()
-
 Alt & 1::MouseMovePointerTopLeft()
 Alt & 2::MouseMovePointerTopCenter()
 Alt & 3::MouseMovePointerTopRight()
@@ -144,7 +146,8 @@ Alt & 6::MouseMovePointerMidRight()
 Alt & 7::MouseMovePointerBotLeft()
 Alt & 8::MouseMovePointerBotCenter()
 Alt & 9::MouseMovePointerBotRight()
-Alt & Backspace::MousePointerWindowCenterClick()
+Alt & 0::MouseMovePointerMidCenter()
+;Alt & 0::MousePointerWindowCenterClick()
 
 GetScreenHeight() {
   return A_ScreenHeight
@@ -342,10 +345,10 @@ MouseMovePointerBotRight() {
   return
 }
 
-MousePointerWindowCenterClick() {
-  WinGetPos, X, Y, window_width, window_height, A
-  width_divided_by_two := DivideByTwo(window_width)
-  height_divided_by_two := DivideByTwo(window_height)
-  Click, %width_divided_by_two%, %height_divided_by_two%
-  Return
-}
+; MousePointerWindowCenterClick() {
+;   WinGetPos, X, Y, window_width, window_height, A
+;   width_divided_by_two := DivideByTwo(window_width)
+;   height_divided_by_two := DivideByTwo(window_height)
+;   Click, %width_divided_by_two%, %height_divided_by_two%
+;   Return
+; }
