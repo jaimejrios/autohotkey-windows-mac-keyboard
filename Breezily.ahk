@@ -104,7 +104,6 @@ F16 & ]::KeypressX2_1(ctrl_key, tab_key) ;NextView
 F16 & [::KeypressX3_1(ctrl_key, shift_key, tab_key) ;PreviousView
 #N::Keypress(f2_key) ;RenameSelection
 F16 & Enter::KeypressX2_1(ctrl_key, enter_key)
-Alt & \::Keypress(apps_key) ;RightClickAlternative
 Alt & /::KeypressX2_1(windows_key, B_key) ;TaskbarButtonsFocus
 Alt & F::KeypressX2_1(alt_key, right_key) ;NextWebpage
 Alt & B::KeypressX2_1(alt_key, left_key) ;PreviousWebpage
@@ -133,6 +132,7 @@ Alt & O::Keypress(left_mouse_btn)
 Alt & C::Keypress(left_mouse_btn)
 Alt & X::MouseClickLeftButton()
 Alt & R::MouseClickRightButton()
+Alt & \::Keypress(apps_key)
 Alt & W::MouseMovePointerUp()
 Alt & A::MouseMovePointerLeft()
 Alt & S::MouseMovePointerDown()
