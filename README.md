@@ -7,7 +7,7 @@ This [AutoHotkey](https://www.autohotkey.com/) app helps make Windows a breeze t
 Breezily has been tested with an English (US) keyboard layout, but should work under different layouts too. [SharpKeys](https://github.com/randyrants/sharpkeys) is required to use Breezily.
 
 Good Stuff To Know:
-- **What is [AutoHotkey](http://autohotkey.com/)?** - An automation scription language for Windows.
+- **What is [AutoHotkey]?** - An automation scription language for Windows.
 - **What are Hotkeys?** - Automation commands programmed with [AutoHotkey](http://autohotkey.com/).
 - **What is Hotclicking?** - Using a hotkey command to mouse click.
 - **What is a Hotcursor** - A hotkey command to move the mouse pointer/cursor.
@@ -120,7 +120,7 @@ Breezily's Shortcut List
   - `Caps Lock + Y` - Ctrl+Y
   - `Caps Lock + Z` - Ctrl+Z
 
-AutoHotkey Guide
+AutoHotkey Script Guide
 ---
 - `;` = comment
 - `!` = alt
