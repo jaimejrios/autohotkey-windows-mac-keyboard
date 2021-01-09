@@ -71,12 +71,12 @@ Alt & H::KeypressX2_1(ctrl_key, A_key) ;SelectAll
 F16 & A::Keypress(home_key) ;MoveCursorToBegOfLine
 F16 & E::Keypress(end_key) ;MoveCursorToEndOfLine
 F16 & K::KeypressX3_2(shift_key, end_key, delete_key) ;DeleteLine
-Alt & `;::KeypressX2_1(shift_key, left_key) ;ExtendSelectionBackwardOneChar
-Alt & '::KeypressX2_1(shift_key, right_key) ;ExtendSelectionForwardOneChar
-Alt & {::KeypressX3_1(ctrl_key, shift_key, left_key) ;ExtendSelectionTowardsEndOfLine
-Alt & }::KeypressX3_1(ctrl_key, shift_key, right_key) ;ExtendSelectionTowardsBegOfLine
-Alt & -::KeypressX2_1(shift_key, home_key) ;ExtendSelectionToBegOfLine
-Alt & +::KeypressX2_1(shift_key, end_key) ;ExtendSelectionToEndOfLine
+F16 & `;::KeypressX2_1(shift_key, left_key) ;ExtendSelectionBackwardOneChar
+F16 & '::KeypressX2_1(shift_key, right_key) ;ExtendSelectionForwardOneChar
+F16 & {::KeypressX3_1(ctrl_key, shift_key, left_key) ;ExtendSelectionTowardsEndOfLine
+F16 & }::KeypressX3_1(ctrl_key, shift_key, right_key) ;ExtendSelectionTowardsBegOfLine
+F16 & BackSpace::KeypressX2_1(shift_key, home_key) ;ExtendSelectionToBegOfLine
+F16 & \::KeypressX2_1(shift_key, end_key) ;ExtendSelectionToEndOfLine
 F16 & U::KeypressX2_1(shift_key, up_key) ;ExtendSelectionUpwards
 F16 & J::KeypressX2_1(shift_key, down_key) ;ExtendSelectionDownwards
 
@@ -99,9 +99,9 @@ F16 & Space::KeypressX2_2(win_key_down, win_key_up) ;WindowsKey
 F16 & G::KeypressX2_1(ctrl_key, F_key) ;OpenFind
 F16 & I::KeypressX2_1(ctrl_key, X_key) ;Cut
 F16 & `::KeypressX2_1(ctrl_key, P_key) ;Print
-F16 & '::KeypressX2_1(ctrl_key, N_key) ;OpenNew
-F16 & ]::KeypressX2_1(ctrl_key, tab_key) ;NextView
-F16 & [::KeypressX3_1(ctrl_key, shift_key, tab_key) ;PreviousView
+Alt & '::KeypressX2_1(ctrl_key, N_key) ;OpenNew
+Alt & ]::KeypressX2_1(ctrl_key, tab_key) ;NextView
+Alt & [::KeypressX3_1(ctrl_key, shift_key, tab_key) ;PreviousView
 #N::Keypress(f2_key) ;RenameSelection
 F16 & Enter::KeypressX2_1(ctrl_key, enter_key)
 Alt & /::KeypressX2_1(windows_key, B_key) ;TaskbarButtonsFocus
@@ -146,8 +146,7 @@ Alt & 6::MouseMovePointerMidRight()
 Alt & 7::MouseMovePointerBotLeft()
 Alt & 8::MouseMovePointerBotCenter()
 Alt & 9::MouseMovePointerBotRight()
-Alt & 0::MouseMovePointerMidCenter()
-;Alt & 0::MousePointerWindowCenterClick()
+Alt & 0::MouseMovePointerWindowCenter()
 
 GetScreenHeight() {
   return A_ScreenHeight
@@ -345,10 +344,10 @@ MouseMovePointerBotRight() {
   return
 }
 
-; MousePointerWindowCenterClick() {
-;   WinGetPos, X, Y, window_width, window_height, A
-;   width_divided_by_two := DivideByTwo(window_width)
-;   height_divided_by_two := DivideByTwo(window_height)
-;   Click, %width_divided_by_two%, %height_divided_by_two%
-;   Return
-; }
+MouseMovePointerWindowCenter() {
+  WinGetPos, X, Y, window_width, window_height, A
+  width_divided_by_two := DivideByTwo(window_width)
+  height_divided_by_two := DivideByTwo(window_height)
+  MouseMove, %width_divided_by_two%, %height_divided_by_two%
+  Return
+}
