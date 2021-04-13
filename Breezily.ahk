@@ -176,16 +176,8 @@ KeypressX3_1(key_1, key_2, key_3) {
   SendInput, %key_1%%key_2%{%key_3%}
 }
 
-DivideBy(number, divisor) {
-  return (number / (divisor))
-}
-
 MultiplyBy(number, multiplier) {
   return (number * (multiplier))
-}
-
-TimesFiveSixths(number) {
-  return (number * (5/6))
 }
 
 GetMouseMoveDistanceFactor() {
@@ -245,13 +237,12 @@ MouseMovePointerRight() {
   return
 }
 
-
 MouseMovePointerTopLeft() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
-  x_position := DivideBy(screen_width, 6)
-  y_position := DivideBy(screen_height, 4)
+  x_position := MultiplyBy(screen_width, 1/6)
+  y_position := MultiplyBy(screen_height, 1/4)
   MouseMove, %x_position%, %y_position%
   return
 }
@@ -260,8 +251,8 @@ MouseMovePointerTopCenter() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
-  x_position := DivideBy(screen_width, 2)
-  y_position := DivideBy(screen_height, 4)
+  x_position := MultiplyBy(screen_width, 1/2)
+  y_position := MultiplyBy(screen_height, 1/4)
   MouseMove, %x_position%, %y_position%
   return
 }
@@ -271,7 +262,7 @@ MouseMovePointerTopRight() {
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
   x_position := MultiplyBy(screen_width, 5/6)
-  y_position := DivideBy(screen_height, 4)
+  y_position := MultiplyBy(screen_height, 1/4)
   MouseMove, %x_position%, %y_position%
   return
 }
@@ -280,8 +271,8 @@ MouseMovePointerMidLeft() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
-  x_position := DivideBy(screen_width, 6)
-  y_position := DivideBy(screen_height, 2)
+  x_position := MultiplyBy(screen_width, 1/6)
+  y_position := MultiplyBy(screen_height, 1/2)
   MouseMove, %x_position%, %y_position%
   return
 }
@@ -290,8 +281,8 @@ MouseMovePointerMidCenter() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
-  x_position := DivideBy(screen_width, 2)
-  y_position := DivideBy(screen_height, 2)
+  x_position := MultiplyBy(screen_width, 1/2)
+  y_position := MultiplyBy(screen_height, 1/2)
   MouseMove, %x_position%, %y_position%
   return
 }
@@ -301,7 +292,7 @@ MouseMovePointerMidRight() {
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
   x_position := MultiplyBy(screen_width, 5/6)
-  y_position := DivideBy(screen_height, 2)
+  y_position := MultiplyBy(screen_height, 1/2)
   MouseMove, %x_position%, %y_position%
   return
 }
@@ -310,7 +301,7 @@ MouseMovePointerBotLeft() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
-  x_position := DivideBy(screen_width, 6)
+  x_position := MultiplyBy(screen_width, 1/6)
   y_position := MultiplyBy(screen_height, 3/4)
   MouseMove, %x_position%, %y_position%
   return
@@ -320,7 +311,7 @@ MouseMovePointerBotCenter() {
   CoordMode, Mouse, Screen
   screen_width := GetScreenWidth()
   screen_height := GetScreenHeight()
-  x_position := DivideBy(screen_width, 2)
+  x_position := MultiplyBy(screen_width, 1/2)
   y_position := MultiplyBy(screen_height, 3/4)
   MouseMove, %x_position%, %y_position%
   return
@@ -338,8 +329,8 @@ MouseMovePointerBotRight() {
 
 MouseMovePointerWindowCenter() {
   WinGetPos, X, Y, window_width, window_height, A
-  width_divided_by_two := DivideBy(window_width, 2)
-  height_divided_by_two := DivideBy(window_height, 2)
-  MouseMove, %width_divided_by_two%, %height_divided_by_two%
+  new_window_width := MultiplyBy(window_width, 1/2)
+  new_window_height := MultiplyBy(window_height, 1/2)
+  MouseMove, %new_window_width%, %new_window_height%
   Return
 }
