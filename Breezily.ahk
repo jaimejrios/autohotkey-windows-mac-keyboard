@@ -97,7 +97,7 @@ F16 & /::KeypressDouble_E1(windows_key, up_key) ;MaximizeWindow
 ;ESSENTIAL SHORTCUTS
 F16 & Q::Keypress(escape_key) ;EscapeKey
 F16 & Space::KeypressDouble_E2(win_key_down, win_key_up) ;WindowsKey
-F16 & G::KeypressDouble_E1(ctrl_key, F_key) ;OpenFind
+Alt & F::KeypressDouble_E1(ctrl_key, F_key) ;OpenFind
 F16 & I::KeypressDouble_E1(ctrl_key, X_key) ;Cut
 F16 & `::KeypressDouble_E1(ctrl_key, P_key) ;Print
 Alt & '::KeypressDouble_E1(ctrl_key, N_key) ;OpenNew
@@ -105,7 +105,7 @@ Alt & ]::KeypressDouble_E1(ctrl_key, tab_key) ;NextView
 Alt & [::KeypressTriple_E1(ctrl_key, shift_key, tab_key) ;PreviousView
 #N::Keypress(f2_key) ;RenameSelection
 F16 & Enter::KeypressDouble_E1(ctrl_key, enter_key)
-Alt & F::KeypressDouble_E1(alt_key, right_key) ;NextWebpage
+Alt & G::KeypressDouble_E1(alt_key, right_key) ;GoToNextWebpage
 Alt & B::KeypressDouble_E1(alt_key, left_key) ;PreviousWebpage
 LWin & 8::Keypress(bullet_symbol) ;InsertBullet
 
