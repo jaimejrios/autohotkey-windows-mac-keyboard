@@ -104,7 +104,6 @@ Alt & ]::KeypressX2_1(ctrl_key, tab_key) ;NextView
 Alt & [::KeypressX3_1(ctrl_key, shift_key, tab_key) ;PreviousView
 #N::Keypress(f2_key) ;RenameSelection
 F16 & Enter::KeypressX2_1(ctrl_key, enter_key)
-Alt & /::KeypressX2_1(windows_key, B_key) ;TaskbarButtonsFocus
 Alt & F::KeypressX2_1(alt_key, right_key) ;NextWebpage
 Alt & B::KeypressX2_1(alt_key, left_key) ;PreviousWebpage
 LWin & 8::Keypress(bullet_symbol) ;InsertBullet
