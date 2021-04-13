@@ -36,6 +36,7 @@ up_key=up
 tab_key=tab
 win_key_down=LWinDown
 win_key_up=LWinUp
+;VIRUAL KEYS
 A_key=vk41
 B_key=vk42
 C_key=vk43
@@ -67,64 +68,64 @@ F16 & P::Keypress(up_key)
 F16 & N::Keypress(down_key)
 Alt & P::Keypress(pageup_key)
 Alt & N::Keypress(pagedown_key)
-Alt & H::KeypressX2_1(ctrl_key, A_key) ;SelectAll
+Alt & H::KeypressDouble_E1(ctrl_key, A_key) ;SelectAll
 F16 & A::Keypress(home_key) ;MoveCursorToBegOfLine
 F16 & E::Keypress(end_key) ;MoveCursorToEndOfLine
-F16 & K::KeypressX3_2(shift_key, end_key, delete_key) ;DeleteLine
-F16 & `;::KeypressX2_1(shift_key, left_key) ;ExtendSelectionBackwardOneChar
-F16 & '::KeypressX2_1(shift_key, right_key) ;ExtendSelectionForwardOneChar
-F16 & {::KeypressX3_1(ctrl_key, shift_key, left_key) ;ExtendSelectionTowardsEndOfLine
-F16 & }::KeypressX3_1(ctrl_key, shift_key, right_key) ;ExtendSelectionTowardsBegOfLine
-F16 & BackSpace::KeypressX2_1(shift_key, home_key) ;ExtendSelectionToBegOfLine
-F16 & \::KeypressX2_1(shift_key, end_key) ;ExtendSelectionToEndOfLine
-F16 & U::KeypressX2_1(shift_key, up_key) ;ExtendSelectionUpwards
-F16 & J::KeypressX2_1(shift_key, down_key) ;ExtendSelectionDownwards
+F16 & K::KeypressTriple_E2(shift_key, end_key, delete_key) ;DeleteLine
+F16 & `;::KeypressDouble_E1(shift_key, left_key) ;ExtendSelectionBackwardOneChar
+F16 & '::KeypressDouble_E1(shift_key, right_key) ;ExtendSelectionForwardOneChar
+F16 & {::KeypressTriple_E1(ctrl_key, shift_key, left_key) ;ExtendSelectionTowardsEndOfLine
+F16 & }::KeypressTriple_E1(ctrl_key, shift_key, right_key) ;ExtendSelectionTowardsBegOfLine
+F16 & BackSpace::KeypressDouble_E1(shift_key, home_key) ;ExtendSelectionToBegOfLine
+F16 & \::KeypressDouble_E1(shift_key, end_key) ;ExtendSelectionToEndOfLine
+F16 & U::KeypressDouble_E1(shift_key, up_key) ;ExtendSelectionUpwards
+F16 & J::KeypressDouble_E1(shift_key, down_key) ;ExtendSelectionDownwards
 
 ;DESKTOP-NAV SHORTCUTS
-F16 & 4::KeypressX2_1(windows_key, tab_key) ;ShowTaskViewPanel
-F16 & 5::KeypressX3_1(windows_key, ctrl_key, right_key) ;SwitchToRightVirtualDesktop
-F16 & 7::KeypressX3_1(windows_key, ctrl_key, left_key) ;SwitchToLeftVirtualDesktop
-F16 & 8::KeypressX3_1(windows_key, ctrl_key, D_key) ;OpenNewVirtualDesktop
-F16 & 9::KeypressX3_1(windows_key, ctrl_key, f4_key) ;CloseActiveVirtualDesktop
+F16 & 4::KeypressDouble_E1(windows_key, tab_key) ;ShowTaskViewPanel
+F16 & 5::KeypressTriple_E1(windows_key, ctrl_key, right_key) ;SwitchToRightVirtualDesktop
+F16 & 7::KeypressTriple_E1(windows_key, ctrl_key, left_key) ;SwitchToLeftVirtualDesktop
+F16 & 8::KeypressTriple_E1(windows_key, ctrl_key, D_key) ;OpenNewVirtualDesktop
+F16 & 9::KeypressTriple_E1(windows_key, ctrl_key, f4_key) ;CloseActiveVirtualDesktop
 
 ;WINDOW-NAV SHORTCUTS
-F16 & M::KeypressX2_1(windows_key, down_key) ;MinimizeWindow
-F16 & <::KeypressX2_1(windows_key, left_key) ;MoveWindowLeft
-F16 & >::KeypressX2_1(windows_key, right_key) ;MoveWindowRight
-F16 & /::KeypressX2_1(windows_key, up_key) ;MaximizeWindow
+F16 & M::KeypressDouble_E1(windows_key, down_key) ;MinimizeWindow
+F16 & <::KeypressDouble_E1(windows_key, left_key) ;MoveWindowLeft
+F16 & >::KeypressDouble_E1(windows_key, right_key) ;MoveWindowRight
+F16 & /::KeypressDouble_E1(windows_key, up_key) ;MaximizeWindow
 
 ;ESSENTIAL SHORTCUTS
 F16 & Q::Keypress(escape_key) ;EscapeKey
-F16 & Space::KeypressX2_2(win_key_down, win_key_up) ;WindowsKey
-F16 & G::KeypressX2_1(ctrl_key, F_key) ;OpenFind
-F16 & I::KeypressX2_1(ctrl_key, X_key) ;Cut
-F16 & `::KeypressX2_1(ctrl_key, P_key) ;Print
-Alt & '::KeypressX2_1(ctrl_key, N_key) ;OpenNew
-Alt & ]::KeypressX2_1(ctrl_key, tab_key) ;NextView
-Alt & [::KeypressX3_1(ctrl_key, shift_key, tab_key) ;PreviousView
+F16 & Space::KeypressDouble_E2(win_key_down, win_key_up) ;WindowsKey
+F16 & G::KeypressDouble_E1(ctrl_key, F_key) ;OpenFind
+F16 & I::KeypressDouble_E1(ctrl_key, X_key) ;Cut
+F16 & `::KeypressDouble_E1(ctrl_key, P_key) ;Print
+Alt & '::KeypressDouble_E1(ctrl_key, N_key) ;OpenNew
+Alt & ]::KeypressDouble_E1(ctrl_key, tab_key) ;NextView
+Alt & [::KeypressTriple_E1(ctrl_key, shift_key, tab_key) ;PreviousView
 #N::Keypress(f2_key) ;RenameSelection
-F16 & Enter::KeypressX2_1(ctrl_key, enter_key)
-Alt & F::KeypressX2_1(alt_key, right_key) ;NextWebpage
-Alt & B::KeypressX2_1(alt_key, left_key) ;PreviousWebpage
+F16 & Enter::KeypressDouble_E1(ctrl_key, enter_key)
+Alt & F::KeypressDouble_E1(alt_key, right_key) ;NextWebpage
+Alt & B::KeypressDouble_E1(alt_key, left_key) ;PreviousWebpage
 LWin & 8::Keypress(bullet_symbol) ;InsertBullet
 
 ;CTRL KEY REMAPPINGS
-F16 & 0::KeypressX2_1(ctrl_key, 0_key)
-F16 & 1::KeypressX2_1(ctrl_key, 1_key)
-F16 & 2::KeypressX2_1(ctrl_key, 2_key)
-F16 & 3::KeypressX2_1(ctrl_key, 3_key)
-F16 & +::KeypressX2_1(ctrl_key, plus_key)
-F16 & -::KeypressX2_1(ctrl_key, minus_key)
-F16 & C::KeypressX2_1(ctrl_key, C_key)
-F16 & L::KeypressX2_1(ctrl_key, L_key)
-F16 & O::KeypressX2_1(ctrl_key, O_key)
-F16 & R::KeypressX2_1(ctrl_key, R_key)
-F16 & S::KeypressX2_1(ctrl_key, S_key)
-F16 & T::KeypressX2_1(ctrl_key, T_key)
-F16 & V::KeypressX2_1(ctrl_key, V_key)
-F16 & W::KeypressX2_1(ctrl_key, W_key)
-F16 & Y::KeypressX2_1(ctrl_key, Y_key)
-F16 & Z::KeypressX2_1(ctrl_key, Z_key)
+F16 & 0::KeypressDouble_E1(ctrl_key, 0_key)
+F16 & 1::KeypressDouble_E1(ctrl_key, 1_key)
+F16 & 2::KeypressDouble_E1(ctrl_key, 2_key)
+F16 & 3::KeypressDouble_E1(ctrl_key, 3_key)
+F16 & +::KeypressDouble_E1(ctrl_key, plus_key)
+F16 & -::KeypressDouble_E1(ctrl_key, minus_key)
+F16 & C::KeypressDouble_E1(ctrl_key, C_key)
+F16 & L::KeypressDouble_E1(ctrl_key, L_key)
+F16 & O::KeypressDouble_E1(ctrl_key, O_key)
+F16 & R::KeypressDouble_E1(ctrl_key, R_key)
+F16 & S::KeypressDouble_E1(ctrl_key, S_key)
+F16 & T::KeypressDouble_E1(ctrl_key, T_key)
+F16 & V::KeypressDouble_E1(ctrl_key, V_key)
+F16 & W::KeypressDouble_E1(ctrl_key, W_key)
+F16 & Y::KeypressDouble_E1(ctrl_key, Y_key)
+F16 & Z::KeypressDouble_E1(ctrl_key, Z_key)
 
 ;MOUSE-POINTER SHORTCUTS
 Alt & O::Keypress(left_mouse_btn)
@@ -158,20 +159,21 @@ GetScreenWidth() {
 Keypress(key) {
  SendInput, {%key%}
 }
-
-KeypressX2_1(key_1, key_2) {
+; E1 - Enclose 1 Key - {%key2%}
+; E2 - Enclose 2 Keys - {%key1%}{%key2%}
+KeypressDouble_E1(key_1, key_2) {
   SendInput, %key_1%{%key_2%}
 }
 
-KeypressX2_2(key_1, key_2) {
+KeypressDouble_E2(key_1, key_2) {
   SendInput, {%key_1%}{%key_2%}
 }
 
-KeypressX3_2(key_1, key_2, key_3) {
+KeypressTriple_E2(key_1, key_2, key_3) {
   SendInput, %key_1%{%key_2%}{%key_3%}
 }
 
-KeypressX3_1(key_1, key_2, key_3) {
+KeypressTriple_E1(key_1, key_2, key_3) {
   SendInput, %key_1%%key_2%{%key_3%}
 }
 
