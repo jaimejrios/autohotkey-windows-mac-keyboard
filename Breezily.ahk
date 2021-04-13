@@ -31,7 +31,7 @@ pageup_key=PgUp
 plus_key=NumpadAdd
 pagedown_key=PgDn
 right_key=right
-right_mouse_btn_=RButton
+right_mouse_btn=RButton
 up_key=up
 tab_key=tab
 win_key_down=LWinDown
@@ -95,7 +95,7 @@ F16 & >::KeypressDouble_E1(windows_key, right_key) ;MoveWindowRight
 F16 & /::KeypressDouble_E1(windows_key, up_key) ;MaximizeWindow
 
 ;ESSENTIAL SHORTCUTS
-F16 & Q::Keypress(escape_key) ;EscapeKey
+Alt & Q::Keypress(escape_key) ;EscapeKey
 F16 & Space::KeypressDouble_E2(win_key_down, win_key_up) ;WindowsKey
 Alt & F::KeypressDouble_E1(ctrl_key, F_key) ;OpenFind
 F16 & I::KeypressDouble_E1(ctrl_key, X_key) ;Cut
@@ -108,6 +108,7 @@ F16 & Enter::KeypressDouble_E1(ctrl_key, enter_key)
 Alt & G::KeypressDouble_E1(alt_key, right_key) ;GoToNextWebpage
 Alt & B::KeypressDouble_E1(alt_key, left_key) ;PreviousWebpage
 LWin & 8::Keypress(bullet_symbol) ;InsertBullet
+Alt & X::KeypressTriple_E1(ctrl_key, shift_key, Z_key) ;RedoChange
 
 ;CTRL KEY REMAPPINGS
 F16 & 0::KeypressDouble_E1(ctrl_key, 0_key)
@@ -125,14 +126,11 @@ F16 & T::KeypressDouble_E1(ctrl_key, T_key)
 F16 & V::KeypressDouble_E1(ctrl_key, V_key)
 F16 & W::KeypressDouble_E1(ctrl_key, W_key)
 F16 & Y::KeypressDouble_E1(ctrl_key, Y_key)
-F16 & Z::KeypressDouble_E1(ctrl_key, Z_key)
+Alt & Z::KeypressDouble_E1(ctrl_key, Z_key)
 
 ;MOUSE-POINTER SHORTCUTS
-Alt & O::Keypress(left_mouse_btn)
 Alt & C::Keypress(left_mouse_btn)
-Alt & X::MouseClickLeftButton()
-Alt & R::MouseClickRightButton()
-Alt & \::Keypress(apps_key)
+Alt & V::MouseClickRight()
 Alt & W::MouseMovePointerUp()
 Alt & A::MouseMovePointerLeft()
 Alt & S::MouseMovePointerDown()
@@ -159,22 +157,21 @@ GetScreenWidth() {
 Keypress(key) {
  SendInput, {%key%}
 }
-; E1 - Enclose 1 Key - {%key2%}
-; E2 - Enclose 2 Keys - {%key1%}{%key2%}
+; E1 - Enclose 1 Key - {%key1%}
 KeypressDouble_E1(key_1, key_2) {
   SendInput, %key_1%{%key_2%}
 }
 
+KeypressTriple_E1(key_1, key_2, key_3) {
+  SendInput, %key_1%%key_2%{%key_3%}
+}
+; E2 - Enclose 2 Keys - {%key1%}{%key2%}
 KeypressDouble_E2(key_1, key_2) {
   SendInput, {%key_1%}{%key_2%}
 }
 
 KeypressTriple_E2(key_1, key_2, key_3) {
   SendInput, %key_1%{%key_2%}{%key_3%}
-}
-
-KeypressTriple_E1(key_1, key_2, key_3) {
-  SendInput, %key_1%%key_2%{%key_3%}
 }
 
 MultiplyBy(number, multiplier) {
@@ -185,15 +182,9 @@ GetMouseMoveDistanceFactor() {
   return 0.0275
 }
 
-MouseClickLeftButton() {
+MouseClickRight() {
   MouseGetPos, x_pos, y_pos
-  Click, Left, %x_pos%, %y_pos%
-  return
-}
-
-MouseClickRightButton() {
-  MouseGetPos, x_pos, y_pos
-  Click, Right, %x_pos%, %y_pos%
+  Click %x_pos%, %y_pos% Right
   return
 }
 
