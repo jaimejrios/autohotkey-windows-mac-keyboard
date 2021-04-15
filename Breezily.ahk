@@ -128,6 +128,26 @@ F16 & W::KeypressDouble_E1(ctrl_key, W_key)
 F16 & Y::KeypressDouble_E1(ctrl_key, Y_key)
 Alt & Z::KeypressDouble_E1(ctrl_key, Z_key)
 
+Keypress(key) {
+ SendInput, {%key%}
+}
+; E1 - Enclose 1 Key - {%key1%}
+KeypressDouble_E1(key_1, key_2) {
+  SendInput, %key_1%{%key_2%}
+}
+
+KeypressTriple_E1(key_1, key_2, key_3) {
+  SendInput, %key_1%%key_2%{%key_3%}
+}
+; E2 - Enclose 2 Keys - {%key1%}{%key2%}
+KeypressDouble_E2(key_1, key_2) {
+  SendInput, {%key_1%}{%key_2%}
+}
+
+KeypressTriple_E2(key_1, key_2, key_3) {
+  SendInput, %key_1%{%key_2%}{%key_3%}
+}
+
 ;MOUSE-POINTER SHORTCUTS
 Alt & C::Keypress(left_mouse_btn)
 Alt & V::MouseClickRight()
@@ -154,43 +174,23 @@ GetScreenWidth() {
   return A_ScreenWidth
 }
 
-Keypress(key) {
- SendInput, {%key%}
-}
-; E1 - Enclose 1 Key - {%key1%}
-KeypressDouble_E1(key_1, key_2) {
-  SendInput, %key_1%{%key_2%}
+GetMouseMoveDistanceFactor() {
+  return 0.0275
 }
 
-KeypressTriple_E1(key_1, key_2, key_3) {
-  SendInput, %key_1%%key_2%{%key_3%}
-}
-; E2 - Enclose 2 Keys - {%key1%}{%key2%}
-KeypressDouble_E2(key_1, key_2) {
-  SendInput, {%key_1%}{%key_2%}
-}
-
-KeypressTriple_E2(key_1, key_2, key_3) {
-  SendInput, %key_1%{%key_2%}{%key_3%}
+GetPointerOffsetDistance(size, factor) {
+  offset_distance := size * factor
+  return offset_distance
 }
 
 MultiplyBy(number, multiplier) {
   return (number * (multiplier))
 }
 
-GetMouseMoveDistanceFactor() {
-  return 0.0275
-}
-
 MouseClickRight() {
   MouseGetPos, x_pos, y_pos
   Click %x_pos%, %y_pos% Right
   return
-}
-
-GetPointerOffsetDistance(size, factor) {
-  offset_distance := size * factor
-  return offset_distance
 }
 
 MouseMovePointerUp() {
