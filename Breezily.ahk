@@ -95,7 +95,7 @@ F16 & >::KeypressDouble_E1(windows_key, right_key) ;MoveWindowRight
 F16 & /::KeypressDouble_E1(windows_key, up_key) ;MaximizeWindow
 
 ;ESSENTIAL SHORTCUTS
-Alt & Q::Keypress(escape_key) ;EscapeKey
+F16 & Q::Keypress(escape_key) ;EscapeKey
 F16 & Space::KeypressDouble_E2(win_key_down, win_key_up) ;WindowsKey
 Alt & F::KeypressDouble_E1(ctrl_key, F_key) ;OpenFind
 F16 & I::KeypressDouble_E1(ctrl_key, X_key) ;Cut
