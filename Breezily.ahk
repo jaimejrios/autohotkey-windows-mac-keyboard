@@ -100,7 +100,7 @@ F16 & Q::Keypress(escape_key) ;EscapeKey
 F16 & X::KeypressTriple_E1(ctrl_key, shift_key, Z_key) ;RedoChange
 F16 & 4::KeypressDouble_E1(ctrl_key, tab_key) ;NextView
 F16 & 5::KeypressTriple_E1(ctrl_key, shift_key, tab_key) ;PreviousView
-F16 & 8::Keypress(bullet_symbol) ;InsertBullet
+F16 & 7::Keypress(bullet_symbol) ;InsertBullet
 F17 & Space::Keypress(f2_key) ;RenameSelection
 F17 & F::KeypressDouble_E1(alt_key, right_key) ;GoToNextWebpage
 F17 & G::KeypressDouble_E1(alt_key, left_key) ;GoToPreviousWebpage
@@ -114,8 +114,7 @@ F16 & -::KeypressDouble_E1(ctrl_key, minus_key)
 F16 & +::KeypressDouble_E1(ctrl_key, plus_key)
 F16 & C::KeypressDouble_E1(ctrl_key, C_key)
 F16 & G::KeypressDouble_E1(ctrl_key, F_key)
-F16 & 7::KeypressDouble_E1(ctrl_key, L_key)
-F16 & O::KeypressDouble_E1(ctrl_key, O_key)
+F16 & 8::KeypressDouble_E1(ctrl_key, L_key)
 F16 & R::KeypressDouble_E1(ctrl_key, R_key)
 F16 & S::KeypressDouble_E1(ctrl_key, S_key)
 F16 & T::KeypressDouble_E1(ctrl_key, T_key)
