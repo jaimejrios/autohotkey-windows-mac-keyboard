@@ -66,9 +66,9 @@ F16 & B::Keypress(left_key)
 F16 & F::Keypress(right_key)
 F16 & P::Keypress(up_key)
 F16 & N::Keypress(down_key)
-Alt & P::Keypress(pageup_key)
-Alt & N::Keypress(pagedown_key)
-Alt & H::KeypressDouble_E1(ctrl_key, A_key) ;SelectAll
+F16 & 7::Keypress(pageup_key)
+F16 & 8::Keypress(pagedown_key)
+F16 & Y::KeypressDouble_E1(ctrl_key, A_key) ;SelectAll
 F16 & A::Keypress(home_key) ;MoveCursorToBegOfLine
 F16 & E::Keypress(end_key) ;MoveCursorToEndOfLine
 F16 & K::KeypressTriple_E2(shift_key, end_key, delete_key) ;DeleteLine
@@ -82,33 +82,26 @@ F16 & U::KeypressDouble_E1(shift_key, up_key) ;ExtendSelectionUpwards
 F16 & J::KeypressDouble_E1(shift_key, down_key) ;ExtendSelectionDownwards
 
 ;DESKTOP-NAV SHORTCUTS
-F16 & 4::KeypressDouble_E1(windows_key, tab_key) ;ShowTaskViewPanel
-F16 & 5::KeypressTriple_E1(windows_key, ctrl_key, right_key) ;SwitchToRightVirtualDesktop
-F16 & 7::KeypressTriple_E1(windows_key, ctrl_key, left_key) ;SwitchToLeftVirtualDesktop
-F16 & 8::KeypressTriple_E1(windows_key, ctrl_key, D_key) ;OpenNewVirtualDesktop
-F16 & 9::KeypressTriple_E1(windows_key, ctrl_key, f4_key) ;CloseActiveVirtualDesktop
+F16 & Up::KeypressDouble_E1(windows_key, tab_key) ;ShowTaskViewPanel
+F16 & Down::KeypressDouble_E1(windows_key, tab_key) ;ShowTaskViewPanel
+F16 & Right::KeypressTriple_E1(windows_key, ctrl_key, right_key) ;SwitchToRightVirtualDesktop
+F16 & Left::KeypressTriple_E1(windows_key, ctrl_key, left_key) ;SwitchToLeftVirtualDesktop
+;F16 & 8::KeypressTriple_E1(windows_key, ctrl_key, D_key) ;OpenNewVirtualDesktop
+;F16 & 9::KeypressTriple_E1(windows_key, ctrl_key, f4_key) ;CloseActiveVirtualDesktop
 
 ;WINDOW-NAV SHORTCUTS
 F16 & M::KeypressDouble_E1(windows_key, down_key) ;MinimizeWindow
 F16 & <::KeypressDouble_E1(windows_key, left_key) ;MoveWindowLeft
 F16 & >::KeypressDouble_E1(windows_key, right_key) ;MoveWindowRight
 F16 & /::KeypressDouble_E1(windows_key, up_key) ;MaximizeWindow
+F16 & 5::KeypressDouble_E1(ctrl_key, tab_key) ;NextView
+F16 & 4::KeypressTriple_E1(ctrl_key, shift_key, tab_key) ;PreviousView
 
 ;ESSENTIAL SHORTCUTS
 F16 & Q::Keypress(escape_key) ;EscapeKey
-F16 & Space::KeypressDouble_E2(win_key_down, win_key_up) ;WindowsKey
-Alt & F::KeypressDouble_E1(ctrl_key, F_key) ;OpenFind
-F16 & I::KeypressDouble_E1(ctrl_key, X_key) ;Cut
-F16 & `::KeypressDouble_E1(ctrl_key, P_key) ;Print
-Alt & '::KeypressDouble_E1(ctrl_key, N_key) ;OpenNew
-Alt & ]::KeypressDouble_E1(ctrl_key, tab_key) ;NextView
-Alt & [::KeypressTriple_E1(ctrl_key, shift_key, tab_key) ;PreviousView
+F16 & X::KeypressTriple_E1(ctrl_key, shift_key, Z_key) ;RedoChange
 #N::Keypress(f2_key) ;RenameSelection
-F16 & Enter::KeypressDouble_E1(ctrl_key, enter_key)
-Alt & G::KeypressDouble_E1(alt_key, right_key) ;GoToNextWebpage
-Alt & B::KeypressDouble_E1(alt_key, left_key) ;PreviousWebpage
 LWin & 8::Keypress(bullet_symbol) ;InsertBullet
-Alt & X::KeypressTriple_E1(ctrl_key, shift_key, Z_key) ;RedoChange
 
 ;CTRL KEY REMAPPINGS
 F16 & 0::KeypressDouble_E1(ctrl_key, 0_key)
@@ -118,6 +111,8 @@ F16 & 3::KeypressDouble_E1(ctrl_key, 3_key)
 F16 & +::KeypressDouble_E1(ctrl_key, plus_key)
 F16 & -::KeypressDouble_E1(ctrl_key, minus_key)
 F16 & C::KeypressDouble_E1(ctrl_key, C_key)
+F16 & G::KeypressDouble_E1(ctrl_key, F_key)
+F16 & I::KeypressDouble_E1(ctrl_key, X_key)
 F16 & L::KeypressDouble_E1(ctrl_key, L_key)
 F16 & O::KeypressDouble_E1(ctrl_key, O_key)
 F16 & R::KeypressDouble_E1(ctrl_key, R_key)
@@ -125,8 +120,8 @@ F16 & S::KeypressDouble_E1(ctrl_key, S_key)
 F16 & T::KeypressDouble_E1(ctrl_key, T_key)
 F16 & V::KeypressDouble_E1(ctrl_key, V_key)
 F16 & W::KeypressDouble_E1(ctrl_key, W_key)
-F16 & Y::KeypressDouble_E1(ctrl_key, Y_key)
-Alt & Z::KeypressDouble_E1(ctrl_key, Z_key)
+F16 & Z::KeypressDouble_E1(ctrl_key, Z_key)
+F16 & Enter::KeypressDouble_E1(ctrl_key, enter_key)
 
 Keypress(key) {
  SendInput, {%key%}
@@ -149,22 +144,24 @@ KeypressTriple_E2(key_1, key_2, key_3) {
 }
 
 ;MOUSE-POINTER SHORTCUTS
-Alt & C::Keypress(left_mouse_btn)
-Alt & V::MouseClickRight()
-Alt & W::MouseMovePointerUp()
-Alt & A::MouseMovePointerLeft()
-Alt & S::MouseMovePointerDown()
-Alt & D::MouseMovePointerRight()
-Alt & 1::MouseMovePointerTopLeft()
-Alt & 2::MouseMovePointerTopCenter()
-Alt & 3::MouseMovePointerTopRight()
-Alt & 4::MouseMovePointerMidLeft()
-Alt & 5::MouseMovePointerMidCenter()
-Alt & 6::MouseMovePointerMidRight()
-Alt & 7::MouseMovePointerBotLeft()
-Alt & 8::MouseMovePointerBotCenter()
-Alt & 9::MouseMovePointerBotRight()
-Alt & 0::MouseMovePointerWindowCenter()
+F17 & C::Keypress(left_mouse_btn)
+F17 & V::MouseClickRight()
+F17 & W::MouseMovePointerUp()
+F17 & A::MouseMovePointerLeft()
+F17 & S::MouseMovePointerDown()
+F17 & D::MouseMovePointerRight()
+F17 & 1::MouseMovePointerTopLeft()
+F17 & 2::MouseMovePointerTopCenter()
+F17 & 3::MouseMovePointerTopRight()
+F17 & 4::MouseMovePointerMidLeft()
+F17 & 5::MouseMovePointerMidCenter()
+F17 & 6::MouseMovePointerMidRight()
+F17 & 7::MouseMovePointerBotLeft()
+F17 & 8::MouseMovePointerBotCenter()
+F17 & 9::MouseMovePointerBotRight()
+F17 & 0::MouseMovePointerWindowCenter()
+F17 & G::KeypressDouble_E1(alt_key, right_key) ;GoToNextWebpage
+F17 & B::KeypressDouble_E1(alt_key, left_key) ;PreviousWebpage
 
 GetScreenHeight() {
   return A_ScreenHeight
