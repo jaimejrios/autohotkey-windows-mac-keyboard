@@ -86,8 +86,8 @@ F16 & Up::KeypressDouble_E1(windows_key, tab_key) ;ShowTaskViewPanel
 F16 & Down::KeypressDouble_E1(windows_key, tab_key) ;ShowTaskViewPanel
 F16 & Right::KeypressTriple_E1(windows_key, ctrl_key, right_key) ;SwitchToRightVirtualDesktop
 F16 & Left::KeypressTriple_E1(windows_key, ctrl_key, left_key) ;SwitchToLeftVirtualDesktop
-F17 & Z::KeypressTriple_E1(windows_key, ctrl_key, D_key) ;OpenNewVirtualDesktop
-F17 & X::KeypressTriple_E1(windows_key, ctrl_key, f4_key) ;CloseActiveVirtualDesktop
+F16 & Z::KeypressTriple_E1(windows_key, ctrl_key, D_key) ;OpenNewVirtualDesktop
+F16 & X::KeypressTriple_E1(windows_key, ctrl_key, f4_key) ;CloseActiveVirtualDesktop
 
 ;WINDOW-NAV SHORTCUTS
 F16 & M::KeypressDouble_E1(windows_key, down_key) ;MinimizeWindow
@@ -97,13 +97,13 @@ F16 & /::KeypressDouble_E1(windows_key, up_key) ;MaximizeWindow
 
 ;ESSENTIAL SHORTCUTS
 F16 & Q::Keypress(escape_key) ;EscapeKey
-F16 & X::KeypressTriple_E1(ctrl_key, shift_key, Z_key) ;RedoChange
 F16 & 4::KeypressDouble_E1(ctrl_key, tab_key) ;NextView
 F16 & 5::KeypressTriple_E1(ctrl_key, shift_key, tab_key) ;PreviousView
 F16 & 7::Keypress(bullet_symbol) ;InsertBullet
 F17 & Space::Keypress(f2_key) ;RenameSelection
-F17 & F::KeypressDouble_E1(alt_key, right_key) ;GoToNextWebpage
-F17 & G::KeypressDouble_E1(alt_key, left_key) ;GoToPreviousWebpage
+F17 & X::KeypressTriple_E1(ctrl_key, shift_key, Z_key) ;RedoChange
+F17 & G::KeypressDouble_E1(alt_key, right_key) ;GoToNextWebpage
+F17 & B::KeypressDouble_E1(alt_key, left_key) ;GoToPreviousWebpage
 
 ;CTRL KEY REMAPPINGS
 F16 & 1::KeypressDouble_E1(ctrl_key, 1_key)
@@ -113,7 +113,7 @@ F16 & 0::KeypressDouble_E1(ctrl_key, 0_key)
 F16 & -::KeypressDouble_E1(ctrl_key, minus_key)
 F16 & +::KeypressDouble_E1(ctrl_key, plus_key)
 F16 & C::KeypressDouble_E1(ctrl_key, C_key)
-F16 & G::KeypressDouble_E1(ctrl_key, F_key)
+F17 & F::KeypressDouble_E1(ctrl_key, F_key)
 F16 & 8::KeypressDouble_E1(ctrl_key, L_key)
 F16 & R::KeypressDouble_E1(ctrl_key, R_key)
 F16 & S::KeypressDouble_E1(ctrl_key, S_key)
@@ -121,7 +121,7 @@ F16 & T::KeypressDouble_E1(ctrl_key, T_key)
 F16 & V::KeypressDouble_E1(ctrl_key, V_key)
 F16 & W::KeypressDouble_E1(ctrl_key, W_key)
 F16 & I::KeypressDouble_E1(ctrl_key, X_key)
-F16 & Z::KeypressDouble_E1(ctrl_key, Z_key)
+F17 & Z::KeypressDouble_E1(ctrl_key, Z_key)
 F16 & Enter::KeypressDouble_E1(ctrl_key, enter_key)
 
 Keypress(key) {
