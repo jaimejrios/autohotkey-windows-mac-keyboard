@@ -22,9 +22,10 @@ Installing Breezily
 Setting Up Breezily
 ---
 
-Let's set up Breezily to start at log on using the Task Scheduler app.
+Let's set up Breezily using Window's Task Scheduler app (so that it starts at log on). Instructional image guides are also included to help with set up.
 
 1) Press the `Windows` and `R` keys together, and enter `taskschd.msc` on the Run menu.
+![Step 1](/img/1-open-task-scheduler-app)
 2) Next, click the `Create Task` option on the right side of the Task Scheduler app (under the `Actions` menu).
 3) Enter in a name for your task (i.e. `Run Breezily`).
 4) Select the option to `Run only when user is logged on`.
