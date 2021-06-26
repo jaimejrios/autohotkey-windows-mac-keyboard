@@ -57,105 +57,126 @@ Now to make sure Breezily runs smoothly when snapping windows, follow these two 
 
 Breezily's Shortcut List
 ---
-**Cursor Navigation Shortcuts**
+- **Cursor Navigation Shortcuts**
 
-| Key             | Command                          |
-|-----------------|----------------------------------|
-| `Caps Lock`+`D` | Delete                           |
-| `Caps Lock`+`H` | Backspace                        |
-| `Caps Lock`+`B` | Left                             |
-| `Caps Lock`+`F` | Right                            |
-| `Caps Lock`+`P` | Up                               |
-| `Caps Lock`+`N` | Down                             |
-| `Caps Lock`+`O` | PageUp                           |
-| `Caps Lock`+`L` | PageDown                         |
-| `Caps Lock`+`Y` | Highlight/select all             |
-| `Caps Lock`+`A` | Move to beginning of line (home) |
+| Keypress                | Command                                    |
+|-------------------------|--------------------------------------------|
+| `Caps Lock`+`D`         | Delete                                     |
+| `Caps Lock`+`H`         | Backspace                                  |
+| `Caps Lock`+`B`         | Left                                       |
+| `Caps Lock`+`F`         | Right                                      |
+| `Caps Lock`+`P`         | Up                                         |
+| `Caps Lock`+`N`         | Down                                       |
+| `Caps Lock`+`O`         | PageUp                                     |
+| `Caps Lock`+`L`         | PageDown                                   |
+| `Caps Lock`+`Y`         | Highlight/select all                       |
+| `Caps Lock`+`A`         | Move to beginning of line                  |
+| `Caps Lock`+`E`         | Move to end of line                        |
+| `Caps Lock`+`K`         | Delete line                                |
+| `Caps Lock`+`;`         | Extend selection backward one character    |
+| `Caps Lock`+`'`         | Extend selection forward one character     |
+| `Caps Lock`+`{`         | Extend selection towards beginning of line |
+| `Caps Lock`+`}`         | Extend selection towards end of line       |
+| `Caps Lock`+`Backspace` | Highlight selection to beginning of line   |
+| `Caps Lock`+`\`         | Highlight selection to end of line         |
+| `Caps Lock`+`U`         | Extend selection upwards                   |
+| `Caps Lock`+`J`         | Extend selection downwards                 |
 
-  - `Caps Lock + E` - End key (move to end of line)
-  - `Caps Lock + K` - Shift+End+Delete (delete line)
-  - `Caps Lock + ;` - Shift+Left (extend selection backward one character)
-  - `Caps Lock + '` - Shift+Right (extend selection forward one character)
-  - `Caps Lock + {` - Ctrl+Shift+Left (extend selection towards beginning of line)
-  - `Caps Lock + }` - Ctrl+Shift+Right (extend selection towards end of line)
-  - `Caps Lock + Backspace` - Shift+Home (highlight selection to beginning of line)
-  - `Caps Lock + \` - Shift+End (highlight selection to end of line)
-  - `Caps Lock + U` - Shift+Up (extend selection upwards)
-  - `Caps Lock + J` - Shift+Down (extend selection downwards)
 
-* **Mouse Pointer Shortcuts**
-  - `Left Alt + C` - Click left mouse button
-  - `Left Alt + V` - Click the right mouse button
-  - `Left Alt + W` - Move the mouse pointer up
-  - `Left Alt + A` - Move the mouse pointer left
-  - `Left Alt + S` - Move the mouse pointer down
-  - `Left Alt + D` - Move the mouse pointer right
-  - `Left Alt + 1` - Move pointer to top left of screen
-  - `Left Alt + 2` - Move pointer to top center of screen
-  - `Left Alt + 3` - Move pointer to top right of screen
-  - `Left Alt + 4` - Move pointer to middle left of screen
-  - `Left Alt + 5` - Move pointer to the center of screen
-  - `Left Alt + 6` - Move pointer to the middle right of screen
-  - `Left Alt + E` - Move pointer to the bottom left of screen
-  - `Left Alt + R` - Move pointer to the bottom center of screen
-  - `Left Alt + T` - Move pointer to the bottom right of screen
-  - `Left Alt + Q` - Move pointer to the center of current window
+- **Mouse Pointer Shortcuts**
 
-* **Desktop Navigation Shortcuts**
-  - `Caps Lock + 4` - Show task view panel
-  - `Caps Lock + 5` - Switch to right virtual desktop
-  - `Caps Lock + 7` - Switch to left virtual desktop
-  - `Caps Lock + 8` - Create a new virtual desktop
-  - `Caps Lock + X` - Close active virtual desktop
-  - `Right Alt + Tab` - Switch to next application
-  - `Right Alt + Right Shift` - Switch to previous application
+| Keypress        | Command                                      |
+|-----------------|----------------------------------------------|
+| `Right Alt`+`C` | Click left mouse button                      |
+| `Right Alt`+`V` | Click the right mouse button                 |
+| `Right Alt`+`W` | Move the mouse pointer up                    |
+| `Right Alt`+`A` | Move the mouse pointer left                  |
+| `Right Alt`+`S` | Move the mouse pointer down                  |
+| `Right Alt`+`D` | Move the mouse pointer right                 |
+| `Right Alt`+`1` | Move pointer to top left of screen           |
+| `Right Alt`+`2` | Move pointer to top center of screen         |
+| `Right Alt`+`3` | Move pointer to top right of screen          |
+| `Right Alt`+`4` | Move pointer to middle left of screen        |
+| `Right Alt`+`5` | Move pointer to the center of screen         |
+| `Right Alt`+`6` | Move pointer to the middle right of screen   |
+| `Right Alt`+`E` | Move pointer to the bottom left of screen    |
+| `Right Alt`+`R` | Move pointer to the bottom center of screen  |
+| `Right Alt`+`T` | Move pointer to the bottom right of screen   |
+| `Right Alt`+`Q` | Move pointer to the center of current window |
 
-* **Window Navigation Shortcuts**
-  - `Caps Lock + M` - Minimize app windows
-  - `Caps Lock + <` - Move current window to left side of screen
-  - `Caps Lock + >` - Move current window to right side of screen
-  - `Caps Lock + /` - Maximize app windows
 
-* **Other Essential Shortcuts**
-  - `Caps Lock + Q` - Escape
-  - `Right Alt + X` - Redo Change
-  - `Caps Lock + Tab` - Ctrl+Tab (Next Webpage View)
-  - `Caps Lock + Right Shift` - Ctrl+Shift+Tab (Previous Webpage View)
-  - `Caps Lock + Backtick` - Reopen Closed Webpage
-  - `Right Alt + Space` - F2 key (Rename selection)
-  - `Right Alt + G` - Alt+Right (move forward to the next webpage)
-  - `Right Alt + B` - Alt+Left (move back to the previous webpage)
-  - `Caps Lock + 9` - Insert unicode bullet symbol
+- **Desktop Navigation Shortcuts**
 
-* **Ctrl Key Remappings**
-  - `Caps Lock + 0` - Ctrl+0
-  - `Caps Lock + 1` - Ctrl+1
-  - `Caps Lock + 2` - Ctrl+2
-  - `Caps Lock + 3` - Ctrl+3
-  - `Caps Lock + +` - Ctrl and +
-  - `Caps Lock + -` - Ctrl and -
-  - `Caps Lock + C` - Ctrl+C
-  - `Left Alt + F` - Ctrl+F
-  - `Caps Lock + G` - Ctrl+L
-  - `Left Alt + L` - Ctrl+N
-  - `Caps Lock + R` - Ctrl+R
-  - `Caps Lock + S` - Ctrl+S
-  - `Caps Lock + T` - Ctrl+T
-  - `Caps Lock + V` - Ctrl+V
-  - `Caps Lock + W` - Ctrl+W
-  - `Caps Lock + I` - Ctrl+X
-  - `Right Alt + Z` - Ctrl+Z
-  - `Caps Lock + Enter` - Ctrl+Enter
+| Keypress                  | Command                          |
+|---------------------------|----------------------------------|
+| `Caps Lock`+`4`           | Show tabsk view panel            |
+| `Caps Lock`+`5`           | Switch bto right virtual desktop |
+| `Caps Lock`+`7`           | Switch to left virtual desktop   |
+| `Caps Lock`+`8`           | Create a new virtual desktop     |
+| `Caps Lock`+`X`           | Close active virtual desktop     |
+| `Right Alt`+`Tab`         | Switch to next application       |
+| `Right Alt`+`Right Shift` | Switch to previous application   |
+
+
+- **Window Navigation Shortcuts**
+
+| Keypress        | Command                                     |
+|-----------------|---------------------------------------------|
+| `Caps Lock`+`M` | Minimize app windows                        |
+| `Caps Lock`+`<` | Move current window to left side of screen  |
+| `Caps Lock`+`>` | Move current window to right side of screen |
+| `Caps Lock`+`/` | Maximize app windows                        |
+
+
+- **Other Essential Shortcuts**
+
+| Keypress                  | Command                                    |
+|---------------------------|--------------------------------------------|
+| `Caps Lock`+`Q`           | Escape                                     |
+| `Right Alt`+`X`           | Redo Change                                |
+| `Caps Lock`+`Tab`         | Move to next open tab                      |
+| `Caps Lock`+`Right Shift` | Move to previous open tab                  |
+| `Caps Lock`+`Backtick`    | Reopen Closed Webpage                      |
+| `Right Alt`+`Space`       | Rename selection                           |
+| `Right Alt`+`G`           | Open the previous webpage from current tab |
+| `Right Alt`+`B`           | Open the next webpage from current tab     |
+| `Caps Lock`+`9`           | Insert unicode bullet symbol               |
+
+
+- **Ctrl Key Command Remappings**
+
+| Keypress              | Command        |
+|-----------------------|----------------|
+| `Caps Lock` + `0`     | `Ctrl`+`0`     |
+| `Caps Lock` + `1`     | `Ctrl`+`1`     |
+| `Caps Lock` + `2`     | `Ctrl`+`2`     |
+| `Caps Lock` + `3`     | `Ctrl`+`3`     |
+| `Caps Lock` + `+`     | `Ctrl`+`+`     |
+| `Caps Lock` + `-`     | `Ctrl`+`-`     |
+| `Caps Lock` + `C`     | `Ctrl`+`C`     |
+| `Right Alt` + `F`     | `Ctrl`+`F`     |
+| `Caps Lock` + `G`     | `Ctrl`+`L`     |
+| `Right Alt` + `L`     | `Ctrl`+`N`     |
+| `Caps Lock` + `R`     | `Ctrl`+`R`     |
+| `Caps Lock` + `S`     | `Ctrl`+`S`     |
+| `Caps Lock` + `T`     | `Ctrl`+`T`     |
+| `Caps Lock` + `V`     | `Ctrl`+`V`     |
+| `Caps Lock` + `W`     | `Ctrl`+`W`     |
+| `Caps Lock` + `I`     | `Ctrl`+`X`     |
+| `Right Alt` + `Z`     | `Ctrl`+`Z`     |
+| `Caps Lock` + `Enter` | `Ctrl`+`Enter` |
 
 AutoHotkey Script Guide
 ---
-- `;` = comment
-- `!` = alt
-- `^` = ctrl
-- `+` = shift
-- `#` = windows
-- `vkXX` = send keystroke with virtual key
-- `U+nnnn` = send a unicode character
+| Symbol   | Description        |
+|----------|--------------------|
+| `;`      | Comment            |
+| `!`      | `Alt`              |
+| `^`      | `Ctrl`             |
+| `+`      | `Shift`            |
+| `#`      | `⊞ Win`            |
+| `vkXX`   | Virtual Key        |
+| `U+nnnn` | Unicode Character  |
 
 Credits
 ---
