@@ -26,11 +26,11 @@ Let's set up Breezily using Window's Task Scheduler app (so that it starts at lo
 
 1) Press the `⊞ Win` and `R` keys together, and enter `taskschd.msc` on the Run menu.
 
-![Step 1: Open task scheduler application](img/setup-task/1-open-task-scheduler-app.jpg)
+![Step 1: Open task scheduler application](img/setup-task/1-open-task-scheduler-app.JPG)
 
 2) Next, click the `Create Task` option on the right side of the Task Scheduler app (under the `Actions` menu).
 
-![Step 2: Create task from task scheduler menu](img/setup-task/2-create-task-from-menu.jpg)
+![Step 2: Create task from task scheduler menu](img/setup-task/2-create-task-from-menu.JPG)
 
 3) Enter in a name for your task (i.e. `Run Breezily`).
 
@@ -40,34 +40,34 @@ Let's set up Breezily using Window's Task Scheduler app (so that it starts at lo
 
 6) Click on the `Configure For` drop-down menu and select `Windows 10` (don't click `OK` just yet.
 
-![Steps 3-6: Editing general options when creating a task](img/setup-task/3-6-edit-general-options.jpg)
+![Steps 3-6: Editing general options when creating a task](img/setup-task/3-6-edit-general-options.JPG)
 
 7) Next, click on the `Triggers` tab, then click `New...`.
 
-![Step 7: Adding a new trigger when creating a task](img/setup-task/7-create-new-trigger.jpg)
+![Step 7: Adding a new trigger when creating a task](img/setup-task/7-create-new-trigger.JPG)
 
 8) Afterwards, click the `Begin the task:` drop-down menu and select `At log on`, then click `OK`.
 
-![Step 8: Setting up a new trigger at log on](img/setup-task/8-set-up-new-trigger-at-log-on.jpg)
+![Step 8: Setting up a new trigger at log on](img/setup-task/8-set-up-new-trigger-at-log-on.JPG)
 
 9) Click the `Actions` tab (near the top 
 of the `Create Task` menu), then click `New`.
 
-![Step 9: Creating a new action when creating a task](img/setup-task/9-create-new-action.jpg)
+![Step 9: Creating a new action when creating a task](img/setup-task/9-create-new-action.JPG)
 
 10) Then click the `Action:` drop-down menu and select `Start a program`.
 
 11) Now click `Browse...` and select the `Breezily.exe` file at its current file location, then click `OK`.
 
-![Steps 9-11: Adding a new action when creating a task](img/setup-task/10-11-new-action-options.jpg)
+![Steps 9-11: Adding a new action when creating a task](img/setup-task/10-11-new-action-options.JPG)
 
 12) After that, click the `Conditions` tab, and uncheck both options under the `Power` category.
 
-![Step 12: Editing the task's conditions](img/setup-task/12-set-up-conditions.jpg)
+![Step 12: Editing the task's conditions](img/setup-task/12-set-up-conditions.JPG)
 
 13) Next, click the `Settings` tab, and uncheck the `Stop the task if it runs longer than:` option, then click `OK`.
 
-![Step 13: Editing the task's settings](img/setup-task/13-edit-settings-options.jpg)
+![Step 13: Editing the task's settings](img/setup-task/13-edit-settings-options.JPG)
 
 Almost Done! Let's install SharpKeys and remap a couple keys. Then Breezily will be ready to go!
 
@@ -77,19 +77,19 @@ Almost Done! Let's install SharpKeys and remap a couple keys. Then Breezily will
 
 3) After SharpKeys is open, click `Add` to add a new key mapping.
 
-![Step 3: Adding a new key mapping within SharpKeys](img/setup-sharpkeys/3-add-key-mappings.jpg)
+![Step 3: Adding a new key mapping within SharpKeys](img/setup-sharpkeys/3-add-key-mappings.JPG)
 
 4) Under the `Add New Key Mapping` menu, select the `Caps Lock` key on the left menu and `F16` on the right menu, then click `OK`.
 
-![Step 4: Mapping Caps Lock key to F16 key using SharpKeys](img/setup-sharpkeys/4-map-caps-lock-to-f16.jpg)
+![Step 4: Mapping Caps Lock key to F16 key using SharpKeys](img/setup-sharpkeys/4-map-caps-lock-to-f16.JPG)
 
 5) Click `Add` once more. Then, under the `Add New Key Mapping` menu, select the `Right Alt` key on the left menu and `F17` on the right menu. Click `OK`.
 
-![Step 5: Mapping Right Alt key to F17 key using SharpKeys](img/setup-sharpkeys/5-map-right-alt-to-f17.jpg)
+![Step 5: Mapping Right Alt key to F17 key using SharpKeys](img/setup-sharpkeys/5-map-right-alt-to-f17.JPG)
 
 6) After that, click on `Write to Registry`.
 
-![Step 6: Writing new key mappings to registry within SharpKeys](img/setup-sharpkeys/6-write-key-mappings-to-registry.jpg)
+![Step 6: Writing new key mappings to registry within SharpKeys](img/setup-sharpkeys/6-write-key-mappings-to-registry.JPG)
 
 7) Restart your PC so that the SharpKey changes can be added.
 
@@ -99,7 +99,7 @@ Now to make sure Breezily runs smoothly when snapping windows, follow these two 
 
 2) Leave the `Snap windows` option switched on, as well as the `When I snap a window, automatically size it to fill available space` option. Uncheck all other options.
 
-![Step 2: Modify Snap Settings within Windows Multitasking Settings](img/snap-settings/2-snap-settings.jpg)
+![Step 2: Modify Snap Settings within Windows Multitasking Settings](img/snap-settings/2-snap-settings.JPG)
 
 
 3) You're all done! Enjoy Breezily :)
