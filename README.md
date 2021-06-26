@@ -2,7 +2,7 @@
 Breezily for Windows 10
 ---
 
-This [AutoHotkey](https://www.autohotkey.com/) app helps make Windows a breeze to navigate. It's loosely based off macOS cursor navigation controls (when replacing the `Caps Lock` key with `Ctrl`).
+This [AutoHotkey](https://www.autohotkey.com/) app helps make Windows a breeze to navigate. It's loosely based off [macOS keyboard shortcuts](https://support.apple.com/en-us/HT201236).
 
 Breezily has been tested with an English (US) keyboard layout, but should work under different layouts too. [SharpKeys](https://github.com/randyrants/sharpkeys) is required to use Breezily.
 
@@ -25,35 +25,83 @@ Setting Up Breezily
 Let's set up Breezily using Window's Task Scheduler app (so that it starts at log on).
 
 1) Press the `⊞ Win` and `R` keys together, and enter `taskschd.msc` on the Run menu.
-![alt text](img/1-open-task-scheduler-app.jpg)
+
+![Step 1: Open task scheduler application](img/setup-task/1-open-task-scheduler-app.jpg)
+
 2) Next, click the `Create Task` option on the right side of the Task Scheduler app (under the `Actions` menu).
-3) Enter in a name for your task 
-(i.e. `Run Breezily`).
-4) Select the option to `Run only when user is logged on`.
-5) Check the box to `Run with highest privileges` (this enables Breezily commands to run inside admin-elevated apps like Git Bash).
-6) Click on the `Configure For` drop-down menu and select `Windows 10`.
-7) Next, click on the `Triggers` tab (at the top of the `Create Task` menu), then click `New...`.
+
+![Step 2: Create task from task scheduler menu](img/setup-task/2-create-task-from-menu.jpg)
+
+3) Enter in a name for your task (i.e. `Run Breezily`).
+
+4) Select the option `Run only when user is logged on`.
+
+5) Check the box `Run with highest privileges` (this enables Breezily commands to run inside admin-elevated apps like Git Bash).
+
+6) Click on the `Configure For` drop-down menu and select `Windows 10` (don't click `OK` just yet.
+
+![Steps 3-6: Editing general options when creating a task](img/setup-task/3-6-edit-general-options.jpg)
+
+7) Next, click on the `Triggers` tab, then click `New...`.
+
+![Step 7: Adding a new trigger when creating a task](img/setup-task/7-create-new-trigger.jpg)
+
 8) Afterwards, click the `Begin the task:` drop-down menu and select `At log on`, then click `OK`.
+
+![Step 8: Setting up a new trigger at log on](img/setup-task/8-set-up-new-trigger-at-log-on.jpg)
+
 9) Click the `Actions` tab (near the top 
 of the `Create Task` menu), then click `New`.
+
+![Step 9: Creating a new action when creating a task](img/setup-task/9-create-new-action.jpg)
+
 10) Then click the `Action:` drop-down menu and select `Start a program`.
+
 11) Now click `Browse...` and select the `Breezily.exe` file at its current file location, then click `OK`.
+
+![Steps 9-11: Adding a new action when creating a task](img/setup-task/10-11-new-action-options.jpg)
+
 12) After that, click the `Conditions` tab, and uncheck both options under the `Power` category.
+
+![Step 12: Editing the task's conditions](img/setup-task/12-set-up-conditions.jpg)
+
 13) Next, click the `Settings` tab, and uncheck the `Stop the task if it runs longer than:` option, then click `OK`.
 
-Whew! We're almost done. Let's move onto the final step with installing SharpKeys and mapping a couple keys so that Breezily will be ready to go!
+![Step 13: Editing the task's settings](img/setup-task/13-edit-settings-options.jpg)
+
+Almost Done! Let's install SharpKeys and remap a couple keys. Then Breezily will be ready to go!
 
 1) Download and install [SharpKeys](https://github.com/randyrants/sharpkeys).
+
 2) Press the `⊞ Win` key to search for and open the SharpKeys program.
-3) After SharpKeys is open, click `Add` to create a new key mapping.
+
+3) After SharpKeys is open, click `Add` to add a new key mapping.
+
+![Step 3: Adding a new key mapping within SharpKeys](img/setup-sharpkeys/3-add-key-mappings.jpg)
+
 4) Under the `Add New Key Mapping` menu, select the `Caps Lock` key on the left menu and `F16` on the right menu, then click `OK`.
-5) Click `Add` once more, and under the `Add New Key Mapping` menu, select the `Right Alt` key on the left menu and `F17` on the right menu, then click `OK`.
-5) After that, click on `Write to Registry`.
-6) Lastily, restart your PC so that the SharpKey changes can be added.
+
+![Step 4: Mapping Caps Lock key to F16 key using SharpKeys](img/setup-sharpkeys/4-map-caps-lock-to-f16.jpg)
+
+5) Click `Add` once more. Then, under the `Add New Key Mapping` menu, select the `Right Alt` key on the left menu and `F17` on the right menu. Click `OK`.
+
+![Step 5: Mapping Right Alt key to F17 key using SharpKeys](img/setup-sharpkeys/5-map-right-alt-to-f17.jpg)
+
+6) After that, click on `Write to Registry`.
+
+![Step 6: Writing new key mappings to registry within SharpKeys](img/setup-sharpkeys/6-write-key-mappings-to-registry.jpg)
+
+7) Restart your PC so that the SharpKey changes can be added.
 
 Now to make sure Breezily runs smoothly when snapping windows, follow these two quick steps...
+
 1) Press the `Windows` key and type `Snap Settings`, then press `Enter`.
-2) Leave the `Snap Windows` option checked, and uncheck all other options.
+
+2) Leave the `Snap windows` option switched on, as well as the `When I snap a window, automatically size it to fill available space` option. Uncheck all other options.
+
+![Step 2: Modify Snap Settings within Windows Multitasking Settings](img/snap-settings/2-snap-settings.jpg)
+
+
 3) You're all done! Enjoy Breezily :)
 
 Breezily's Shortcut List
@@ -110,8 +158,8 @@ Breezily's Shortcut List
 
 | Keypress                  | Command                          |
 |---------------------------|----------------------------------|
-| `Caps Lock`+`4`           | Show tabsk view panel            |
-| `Caps Lock`+`5`           | Switch bto right virtual desktop |
+| `Caps Lock`+`4`           | Show task view panel             |
+| `Caps Lock`+`5`           | Switch to right virtual desktop  |
 | `Caps Lock`+`7`           | Switch to left virtual desktop   |
 | `Caps Lock`+`8`           | Create a new virtual desktop     |
 | `Caps Lock`+`X`           | Close active virtual desktop     |
