@@ -22,12 +22,13 @@ Installing Breezily
 Setting Up Breezily
 ---
 
-Let's set up Breezily using Window's Task Scheduler app (so that it starts at log on). Instructional image guides are also included to help with set up.
+Let's set up Breezily using Window's Task Scheduler app (so that it starts at log on).
 
-1) Press the `Windows` and `R` keys together, and enter `taskschd.msc` on the Run menu.
-![Step 1](/img/1-open-task-scheduler-app)
+1) Press the `⊞ Win` and `R` keys together, and enter `taskschd.msc` on the Run menu.
+![alt text](img/1-open-task-scheduler-app.jpg)
 2) Next, click the `Create Task` option on the right side of the Task Scheduler app (under the `Actions` menu).
-3) Enter in a name for your task (i.e. `Run Breezily`).
+3) Enter in a name for your task 
+(i.e. `Run Breezily`).
 4) Select the option to `Run only when user is logged on`.
 5) Check the box to `Run with highest privileges` (this enables Breezily commands to run inside admin-elevated apps like Git Bash).
 6) Click on the `Configure For` drop-down menu and select `Windows 10`.
@@ -56,17 +57,21 @@ Now to make sure Breezily runs smoothly when snapping windows, follow these two 
 
 Breezily's Shortcut List
 ---
-* **Cursor Navigation Shortcuts**
-  - `Caps Lock + D` - Delete
-  - `Caps Lock + H` - Backspace
-  - `Caps Lock + B` - Left
-  - `Caps Lock + F` - Right
-  - `Caps Lock + P` - Up
-  - `Caps Lock + N` - Down
-  - `Caps Lock + O` - PageUp
-  - `Caps Lock + L` - PageDown
-  - `Caps Lock + Y` - Ctrl+A (select all)
-  - `Caps Lock + A` - Home key (move to beginning of line)
+**Cursor Navigation Shortcuts**
+
+| Key             | Command                          |
+|-----------------|----------------------------------|
+| `Caps Lock`+`D` | Delete                           |
+| `Caps Lock`+`H` | Backspace                        |
+| `Caps Lock`+`B` | Left                             |
+| `Caps Lock`+`F` | Right                            |
+| `Caps Lock`+`P` | Up                               |
+| `Caps Lock`+`N` | Down                             |
+| `Caps Lock`+`O` | PageUp                           |
+| `Caps Lock`+`L` | PageDown                         |
+| `Caps Lock`+`Y` | Highlight/select all             |
+| `Caps Lock`+`A` | Move to beginning of line (home) |
+
   - `Caps Lock + E` - End key (move to end of line)
   - `Caps Lock + K` - Shift+End+Delete (delete line)
   - `Caps Lock + ;` - Shift+Left (extend selection backward one character)
