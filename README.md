@@ -41,12 +41,13 @@ of the `Create Task` menu), then click `New`.
 12) After that, click the `Conditions` tab, and uncheck both options under the `Power` category.
 13) Next, click the `Settings` tab, and uncheck the `Stop the task if it runs longer than:` option, then click `OK`.
 
-Whew! We're almost done. Let's move onto the final step with installing SharpKeys and remapping some keys so that Breezily will be ready to go!
+Whew! We're almost done. Let's move onto the final step with installing SharpKeys and mapping a couple keys so that Breezily will be ready to go!
 
 1) Download and install [SharpKeys](https://github.com/randyrants/sharpkeys).
-2) Press the `Windows` key to search for and open the SharpKeys program.
-3) After SharpKeys is open, click `Add` to remap the `Caps Lock` key to `F16`, then click `OK`
-4) Next, click `Add` once to remap the `Right Alt` key to `F17`, then click `OK`.
+2) Press the `⊞ Win` key to search for and open the SharpKeys program.
+3) After SharpKeys is open, click `Add` to create a new key mapping.
+4) Under the `Add New Key Mapping` menu, select the `Caps Lock` key on the left menu and `F16` on the right menu, then click `OK`.
+5) Click `Add` once more, and under the `Add New Key Mapping` menu, select the `Right Alt` key on the left menu and `F17` on the right menu, then click `OK`.
 5) After that, click on `Write to Registry`.
 6) Lastily, restart your PC so that the SharpKey changes can be added.
 
